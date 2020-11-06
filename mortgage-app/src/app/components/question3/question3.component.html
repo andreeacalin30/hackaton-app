@@ -1,0 +1,78 @@
+<div class="container" style="overflow: hidden;">
+    <div class="space-between-title"></div>
+    
+    <div style="float: left; margin-left:1rem;">
+        <img src="../../../assets/Icon-Back Arrow.svg" class="center-element" (click)="backPage()"/>
+    </div>
+    <div style="float: right;margin-right: -6rem;margin-left: 4rem;margin-top: -6rem;">
+        <img src="../../../assets/Circle.png" class="center-element" />
+    </div>
+    <div class="space-between-title"></div>
+    <div class="space-between-title"></div>
+    <div class="space-between-title" style="text-align-last: center;font-family: Avenir-Heavy;color: #595959;">
+        <p>2 of 7</p>
+    </div>
+
+    <div class="H2" style="margin-left: 0.9rem; text-align-last: center;">
+        How many rooms would you like your home to have?
+    </div>
+
+    <div class="row" style="display: flex;align-items: flex-end;place-content: center;    margin-left: -3rem;">
+        <div class="question-box" id="room11" (click)="checkBox1('1')" style="font-size: 2rem;align-items: center;padding-left: 2.7rem; color: #84ADAE;">
+            1
+        </div>
+        <div class="question-box" id="room12" (click)="checkBox1('2')" style="font-size: 2rem;align-items: center;padding-left: 2.8rem; color: #84ADAE;">
+            2
+        </div>
+        <div class="question-box" id="room13" (click)="checkBox1('3')" style="font-size: 2rem;align-items: center;padding-left: 2.8rem; color: #84ADAE;">
+            3
+        </div>
+        <div class="question-box" id="rooms1" (click)="checkBox1('more')" style="font-size: 2rem;align-items: center;padding-left: 1.5rem; color: #84ADAE;">
+            More
+        </div>
+    </div>
+
+    <div class="space-between-title"></div>
+
+    <div class="H2" style="margin-left: 0.9rem; text-align-last: center;">
+        How many washrooms would you like your home to have?
+    </div>
+
+    <div class="row" style="display: flex;align-items: flex-end;place-content: center;    margin-left: -3rem;">
+        <div class="question-box" id="room21" (click)="checkBox2('1')" style="font-size: 2rem;align-items: center;padding-left: 2.7rem; color: #84ADAE;">
+            1
+        </div>
+        <div class="question-box" id="room22" (click)="checkBox2('2')" style="font-size: 2rem;align-items: center;padding-left: 2.8rem; color: #84ADAE;">
+            2
+        </div>
+        <div class="question-box" id="room23" (click)="checkBox2('3')" style="font-size: 2rem;align-items: center;padding-left: 2.8rem; color: #84ADAE;">
+            3
+        </div>
+        <div class="question-box" id="rooms2" (click)="checkBox2('more')" style="font-size: 2rem;align-items: center;padding-left: 1.5rem; color: #84ADAE;">
+            More
+        </div>
+    </div>
+
+    <!-- <div class="row" style="display: flex;">
+        <div style="padding-top: 3rem;margin-left: 2rem;margin-right: 2rem;">
+            <img src="../../../assets/Icon-Bulb.svg" class="center-element" />
+          </div>
+        <div class="B1" id="first-line-description" style="margin-right: 2rem;">
+          Different property types have different fees and fixed costs. 
+          A condomium has condo fees and property taxes, but the condo fees may take care of the maintenance costs.
+        </div>
+    </div> -->
+    
+    <div class="space-between-title"></div>
+    <div class="space-between-title"></div>
+    <div class="space-between-title" style="height: 4.2rem!important;"></div>
+
+    <div class="row">
+      <div>
+          <button id="get-started-button" class="center-element" (click)="nextPage()" >Next <img src="../../../assets/Icon-Back Arrow-white.svg" style="margin-bottom: 0.2rem;margin-left: 0.5rem; width: 1.5rem;transform: rotate(180deg);"></button>
+      </div>
+    </div>
+    <div class="space-between-title">
+    </div>
+  </div>
+  

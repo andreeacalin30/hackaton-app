@@ -1,0 +1,74 @@
+<div class="container" style="overflow: hidden;">
+    <div class="space-between-title"></div>
+    
+    <div style="float: left; margin-left:1rem;">
+        <img src="../../../assets/Icon-Back Arrow.svg" class="center-element" (click)="backPage()"/>
+    </div>
+    <div style="float: right;margin-right: -6rem;margin-left: 4rem;margin-top: -6rem;">
+        <img src="../../../assets/Circle.png" class="center-element" />
+    </div>
+    <div class="space-between-title"></div>
+    <div class="space-between-title"></div>
+    <div class="space-between-title" style="text-align-last: center;font-family: Avenir-Heavy;color: #595959;">
+        <p>3 of 7</p>
+    </div>
+
+    <div class="H2" style="margin-left: 0.9rem; text-align-last: center;">
+        Would you like a new or a resale house?
+    </div>
+
+    <!-- <div class="row" style="display: flex;align-items: flex-end;place-content: center;    margin-left: -3rem;">
+        <div class="question-box" id="room1" (click)="checkBox('1')" style="font-size: 2rem;align-items: center;padding-left: 4.5rem; color: #84ADAE;">
+            1
+        </div>
+        <div class="question-box" id="room2" (click)="checkBox('2')" style="font-size: 2rem;align-items: center;padding-left: 4.5rem; color: #84ADAE;">
+            2
+        </div>
+    </div>
+    <div class="row" style="display: flex;align-items: flex-end;place-content: center;    margin-left: -3rem;">
+        <div class="question-box" id="room3" (click)="checkBox('3')" style="font-size: 2rem;align-items: center;padding-left: 4.5rem; color: #84ADAE;">
+            3
+        </div>
+    </div> -->
+
+    <div class="row" style="display: flex;align-items: flex-end;place-content: center;    margin-left: -3rem;">
+        <div id="op1" class="question-box" (click)="checkBox('new')" style="display: block;">
+            <img [src]="getHouseImage1()" class="center-element" style="margin-top: 1.3rem;"/>
+            <p id="op11" style="margin-left: 4.3rem;margin-top: 1rem;font-family: Avenir-Book;font-size: 16px;color: #595959;">New</p>
+        </div>
+        <div id="op2" class="question-box" (click)="checkBox('resale')" style="display: block;">
+            <img [src]="getHouseImage2()" class="center-element" style="margin-top: 1.3rem;"/>
+            <p id="op22" style="margin-left: 4.3rem;margin-top: 1rem;font-family: Avenir-Book;font-size: 16px;color: #595959;">Resale</p>
+        </div>
+    </div>
+    <div class="row" style="display: flex;align-items: flex-end;place-content: center;    margin-left: -3rem;">
+        <div id="op3" class="question-box" (click)="checkBox('both')" style="display: block;">
+            <img [src]="getHouseImage3()" class="center-element" style="margin-top: 1.3rem;"/>
+            <p id="op33" style="margin-left: 4.3rem;margin-top: 1rem;font-family: Avenir-Book;font-size: 16px;color: #595959;">Both</p>
+        </div>
+    
+    </div>
+
+
+    <!-- <div class="row" style="display: flex;">
+        <div style="padding-top: 3rem;margin-left: 2rem;margin-right: 2rem;">
+            <img src="../../../assets/Icon-Bulb.svg" class="center-element" />
+          </div>
+        <div class="B1" id="first-line-description" style="margin-right: 2rem;">
+          Different property types have different fees and fixed costs. 
+          A condomium has condo fees and property taxes, but the condo fees may take care of the maintenance costs.
+        </div>
+    </div> -->
+    
+    <div class="space-between-title"></div>
+    <div class="space-between-title" style="height: 5.9rem;"></div>
+
+    <div class="row">
+      <div>
+          <button id="get-started-button" class="center-element" (click)="nextPage()" >Next <img src="../../../assets/Icon-Back Arrow-white.svg" style="margin-bottom: 0.2rem;margin-left: 0.5rem; width: 1.5rem;transform: rotate(180deg);"></button>
+      </div>
+    </div>
+    <div class="space-between-title">
+    </div>
+  </div>
+  
