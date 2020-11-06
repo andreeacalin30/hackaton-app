@@ -50,5 +50,18 @@ public class UserServiceImpl implements UserService {
 		return userFromDb.get();
 	}
 
+	@Override
+	public User updateUser(User userIn) {
+		Optional<User> userFromDb = userRepostiroy.findById(userIn.getId());
+		
+		if(!userFromDb.isPresent()) {
+			throw new AppException("User does not exist in DB", HttpStatus.BAD_REQUEST);
+		}
+		
+		User updatedUser = userRepostiroy.save(userIn);
+		
+		return updatedUser;
+	}
+
 
 }
