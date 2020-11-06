@@ -2,10 +2,11 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+  width:320px;
 }
 
 .space {
-  height: 130px;
+  height: 100px;
 }
 
 .space-between-title {
@@ -41,7 +42,7 @@
 }
 
 .row {
-  min-width: 400px;
+  min-width: 350px;
 }
 
 #get-started-button {
@@ -59,4 +60,8 @@
   -moz-box-shadow: 0px 0px 4px 1px grey;
   -webkit-box-shadow: 0px 0px 4px 1px grey;
   box-shadow: 0px 0px 4px 2px grey;
+}
+
+.container{
+  overflow: hidden;
 }

@@ -1,0 +1,54 @@
+.space-between-title{
+    height: 50px;
+}
+
+.space{
+    height: 100px;
+}
+
+.container{
+    overflow: hidden;
+}
+
+#login-title{
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  color: #494c7f;
+  letter-spacing: -0.56px;
+  line-height: 40px;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.center-element {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width:320px;
+}
+
+.small-space{
+    height: 10px;
+}
+
+.center-input{
+    text-align:center
+}
+
+input{
+    margin:auto;
+    min-width: 300px;
+    max-width: 330px;
+    height: 38px;
+    background-color: #FBEFF1;
+    outline: none;
+    border: none;
+    
+}
+.row{
+    min-width: 350px;
+    
+}

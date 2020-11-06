@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
-
+import {MatFormFieldModule} from '@angular/material/form-field'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GetStartedPageComponent } from './components/get-started-page/get-started-page.component';
@@ -13,7 +13,8 @@ import { Question4Component } from './components/question4/question4.component';
 import { Question5Component } from './components/question5/question5.component';
 import { Question6Component } from './components/question6/question6.component';
 import { Question7Component } from './components/question7/question7.component';
-
+import { LoginComponent } from './components/login/login.component';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,12 +25,15 @@ import { Question7Component } from './components/question7/question7.component';
     Question4Component,
     Question5Component,
     Question6Component,
-    Question7Component
+    Question7Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatSliderModule
+    MatSliderModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],
