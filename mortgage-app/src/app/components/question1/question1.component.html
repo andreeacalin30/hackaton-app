@@ -1,23 +1,31 @@
-<div class="container">
+<div class="container" style="overflow: hidden;">
     <div class="space-between-title"></div>
+    
     <div style="float: left; margin-left:1rem;">
         <img src="../../../assets/Icon-Back Arrow.svg" class="center-element" />
     </div>
+    <div style="float: right;margin-right: -6rem;margin-left: 4rem;margin-top: -6rem;">
+        <img src="../../../assets/Circle.png" class="center-element" />
+    </div>
     <div class="space-between-title"></div>
     <div class="space-between-title"></div>
-    <div class="space-between-title"></div>
+    <div class="space-between-title" style="text-align-last: center;font-family: Avenir-Heavy;color: #595959;">
+        <p>1 of 7</p>
+    </div>
 
-    <div class="H2" style="margin-left: 0.9rem;">
+    <div class="H2" style="margin-left: 0.9rem;text-align-last: center;">
         What kind of home are you looking for?
     </div>
 
 
-    <div class="row" style="display: flex;align-items: flex-end;place-content: center;">
-        <div class="question-box" (click)="checkBox('house')">
-            <img [src]="getHouseImage()" class="center-element" />
+    <div class="row" style="display: flex;align-items: flex-end;place-content: center;    margin-left: -3rem;">
+        <div id="op1" class="question-box" (click)="checkBox('house')" style="display: block;">
+            <img [src]="getHouseImage()" class="center-element" style="margin-top: 1.3rem;"/>
+            <p id="op11" style="margin-left: 4.3rem;margin-top: 1rem;font-family: Avenir-Book;font-size: 16px;color: #595959;">House</p>
         </div>
-        <div class="question-box" (click)="checkBox('condo')">
-            <img [src]="getCondoImage()" class="center-element" />
+        <div id="op2" class="question-box" (click)="checkBox('condo')" style="display: block;">
+            <img [src]="getCondoImage()" class="center-element" style="margin-top: 2rem;"/>
+            <p id="op22" style="margin-left: 4.3rem;margin-top: 1rem;font-family: Avenir-Book;font-size: 16px;color: #595959;">Condo</p>
         </div>
     </div>
 
@@ -27,16 +35,16 @@
         <div style="padding-top: 3rem;margin-left: 2rem;margin-right: 2rem;">
             <img src="../../../assets/Icon-Bulb.svg" class="center-element" />
           </div>
-        <div class="B1" id="first-line-description" style="margin-right: 2rem;">
+        <div class="B1" id="first-line-description" style="margin-right: 5rem;">
           Different property types have different fees and fixed costs. 
           A condomium has condo fees and property taxes, but the condo fees may take care of the maintenance costs.
         </div>
     </div>
     
-    <div class="space-between-title"></div>
+    <div class="space-between-title" style="height: 7.5rem;"></div>
     <div class="row">
       <div>
-          <button id="get-started-button" class="center-element">Next <img src="../../../assets/Icon-Back Arrow-white.svg" style="margin-bottom: 0.2rem;margin-left: 0.5rem; width: 1.5rem;transform: rotate(180deg);"></button>
+          <button id="get-started-button" class="center-element" (click)="nextPage()">Next <img src="../../../assets/Icon-Back Arrow-white.svg" style="margin-bottom: 0.2rem;margin-left: 0.5rem; width: 1.5rem;transform: rotate(180deg);"></button>
       </div>
     </div>
     <div class="space-between-title">

@@ -1,13 +1,20 @@
-<div class="container">
+<div class="container" style="overflow: hidden;">
     <div class="space-between-title"></div>
     <div style="float: left; margin-left:1rem;">
-        <img src="../../../assets/Icon-Back Arrow.svg" class="center-element" />
+        <img src="../../../assets/Icon-Back Arrow.svg" class="center-element" (click)="backPage()" />
     </div>
-    <div class="space-between-title"></div>
-    <div class="space-between-title"></div>
-    <div class="space-between-title"></div>
 
-    <div class="H2" style="margin-left: 3rem;">
+    <div style="float: right;margin-right: -6rem;margin-left: 4rem;margin-top: -6rem;">
+        <img src="../../../assets/Circle.png" class="center-element" />
+    </div>
+
+    <div class="space-between-title"></div>
+    <div class="space-between-title"></div>
+    <div class="space-between-title" style="text-align-last: center;font-family: Avenir-Heavy;color: #595959;">
+        <p>5 of 7</p>
+    </div>
+
+    <div class="H2" style=" text-align-last: center;">
         What is your annual income?
     </div>
 
@@ -15,11 +22,15 @@
     <div class="row">
         <div class="space-between-title"></div>
 
-        <input class="question-input">
+        <input #box class="question-input" (keyup.enter)="updateValue(box.value)" (blur)="updateValue(box.value)" value="{{value}}">
 
         <div class="space-between-title"></div>
+        <div style="display: inline-flex;">
+            <p style="padding-top: 1.5rem;margin-right: -2rem;margin-left: 3rem;">0$</p>
+            <mat-slider min="0" max="500000" step="100" value="{{value}}" (change)="updateValueSlider($event)" style="margin-left: 2rem;width: 24rem;"></mat-slider>
+            <p style="padding-top: 1.5rem;">500,000$</p>
 
-        <mat-slider min="1" max="100" step="1" value="10" style="    margin-left: 2rem;width: 35rem;"></mat-slider>
+        </div>
 
         <div class="space-between-title"></div>
     </div>
@@ -29,16 +40,17 @@
         <div style="padding-top: 3rem;margin-left: 2rem;margin-right: 2rem;">
             <img src="../../../assets/Icon-Bulb.svg" class="center-element" />
           </div>
-        <div class="B1" id="first-line-description" style="margin-right: 2rem;">
+        <div class="B1" id="first-line-description" style="margin-right: 6rem;">
          Your annual income is the amount you earn before taxes, also known as the gross amount.
          If you're buying a home with others, include their annual income before taxes as well.
         </div>
     </div>
     
     <div class="space-between-title"></div>
+    <div class="space-between-title" style="height: 4.7rem;"></div>
     <div class="row">
       <div>
-          <button id="get-started-button" class="center-element">Next <img src="../../../assets/Icon-Back Arrow-white.svg" style="margin-bottom: 0.2rem;margin-left: 0.5rem; width: 1.5rem;transform: rotate(180deg);"></button>
+          <button id="get-started-button" class="center-element" (click)="nextPage()">Next <img src="../../../assets/Icon-Back Arrow-white.svg" style="margin-bottom: 0.2rem;margin-left: 0.5rem; width: 1.5rem;transform: rotate(180deg);"></button>
       </div>
     </div>
     <div class="space-between-title">
