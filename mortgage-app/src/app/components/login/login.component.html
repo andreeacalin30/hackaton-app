@@ -21,7 +21,7 @@
     </div>
     <div class="small-space">  
     </div>
-    <form>
+    <form [formGroup]="loginForm">
         <div class="center-input" style="height: 50px;" >
             <input id="username-div" required type="email" placeholder="Email" formControlName="username">
         </div>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="center-input login-space">
-            <button id="login-btn">
+            <button id="login-btn" (click)="loginUser()">
                 Login
             </button>
         </div>
