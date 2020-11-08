@@ -21,12 +21,12 @@
     </div>
     <div class="small-space">  
     </div>
-    <form>
+    <form [formGroup]="loginForm">
         <div class="center-input" style="height: 50px;" >
-            <input id="username-div" required type="email" placeholder="Email" formControlName="username">
+            <input [ngClass]="{'invalid-login-class': invalidLogin==true}" id="username-div" required type="email" placeholder="Email" formControlName="username">
         </div>
         <div  class="center-input" style="height: 50px;" >
-            <input id="password-div" required type="password" placeholder="Password" formControlName="password">
+            <input [ngClass]="{'invalid-login-class': invalidLogin==true}" id="password-div" required type="password" placeholder="Password" formControlName="password">
             <div style="margin-top: 1rem;">  
             </div>
             <div id="forgot-pass-div" class="col-sm-2">
@@ -34,13 +34,16 @@
             </div>
         </div>
         <div class="center-input login-space">
-            <button id="login-btn">
+            <button id="login-btn" (click)="loginUser()">
                 Login
             </button>
         </div>
     </form> 
     <div class="new-user-div"  style="margin-top: 20px; margin-left: 12rem;">
       <div id='new-user'>New user? </div>  <div id="sign-up"> Sign Up</div>
+    </div>
+    <div class="center-input"   [ngClass]="{'invalid-credentials-class': invalidLogin==true, 'invalid-credentials-hidden': invalidLogin==false}" >
+        Invalid credentials!
     </div>
 
 </div>
