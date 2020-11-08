@@ -18,6 +18,7 @@ import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MortgageResultsComponent } from './components/mortgage-results/mortgage-results.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     Question5Component,
     Question6Component,
     Question7Component,
-    LoginComponent
+    LoginComponent,
+    MortgageResultsComponent
   ],
   imports: [
     BrowserModule,
