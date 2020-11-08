@@ -13,6 +13,7 @@ import {UserService} from '../../services/user-service'
 export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
   public userLoginDTO: UserLoginDTO;
+  public invalidLogin: boolean=false;
   constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router) { 
     this.loginForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.email]],
@@ -27,13 +28,18 @@ export class LoginComponent implements OnInit {
       var username= this.loginForm.get("username").value;
       var password= this.loginForm.get("password").value;
       this.userLoginDTO  =new UserLoginDTO(username, password);
-      this.userService.loginUser(this.userLoginDTO).subscribe((result)=>{
+      this.userService.loginUser(this.userLoginDTO).subscribe(result=>{
         if(result.email==username){
           this.router.navigate(['/welcome-page']);
-        } else {
-          console.log('Login error!')
-        }
-      });
+          this.invalidLogin=false;
+        } 
+      }, error=>{
+        console.log(error);
+        this.loginForm.get("username").setValue('');
+        this.loginForm.get("password").setValue('');
+        console.log('Login error!')
+        this.invalidLogin=true;
+      }) ;
     } else {
       console.log("Input error!");
     }
