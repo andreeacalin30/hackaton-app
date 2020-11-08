@@ -1,0 +1,88 @@
+.space-between-title{
+    height: 50px;
+}
+
+.space{
+    height: 100px;
+}
+
+.container{
+    overflow: hidden;
+}
+
+#login-title{
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  color: #494c7f;
+  letter-spacing: -0.56px;
+  line-height: 40px;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.center-element {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width:320px;
+}
+
+.small-space{
+    height: 2rem;
+}
+
+.center-input{
+    text-align:center
+}
+
+input{
+    margin:auto;
+    min-width: 300px;
+    max-width: 330px;
+    height: 38px;
+    background-color: #FBEFF1;
+    outline: none;
+    border: none;
+    padding-left: 1rem;
+}
+.row{
+    min-width: 350px;   
+}
+
+#forgot-pass-div{
+    text-align: right;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    position: inherit;
+}
+
+.login-space{
+    margin-top: 6rem;
+}
+
+#login-btn{
+    border: none;
+    background-color: #84adae;
+    color: white;
+    border-radius: 18px;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.new-user-div{
+    display: flex;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+#sign-up{
+    margin-left: 0.7rem;;
+}
+
+#new-user{
+    opacity: 0.7;
+}
