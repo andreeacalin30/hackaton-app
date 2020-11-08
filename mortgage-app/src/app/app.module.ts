@@ -14,7 +14,10 @@ import { Question5Component } from './components/question5/question5.component';
 import { Question6Component } from './components/question6/question6.component';
 import { Question7Component } from './components/question7/question7.component';
 import { LoginComponent } from './components/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,11 @@ import { MatInputModule } from '@angular/material/input';
     AppRoutingModule,
     MatSliderModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    BrowserAnimationsModule,
+    BrowserModule, 
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],
