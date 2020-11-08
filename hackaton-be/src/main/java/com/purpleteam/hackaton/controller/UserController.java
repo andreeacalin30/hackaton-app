@@ -7,15 +7,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.purpleteam.hackaton.dto.UserLoginDTO;
 import com.purpleteam.hackaton.model.User;
 import com.purpleteam.hackaton.service.UserService;
 
-@CrossOrigin(origins = "")
-@Controller
+@CrossOrigin(origins = "*")
+@RestController
 @RequestMapping("/api")
 public class UserController {
 	
@@ -29,11 +31,18 @@ public class UserController {
 		return new ResponseEntity<User>(insertedUser, HttpStatus.CREATED);		
 	}
 	
-	@GetMapping("/login/user")
-	public ResponseEntity<User> loginUser(UserLoginDTO userLoginDTO){
+	@PostMapping("/login/user")
+	public ResponseEntity<User> loginUser(@RequestBody UserLoginDTO userLoginDTO){
 		User userDetails = userService.loginUser(userLoginDTO);
 		
 		return new ResponseEntity<User>(userDetails, HttpStatus.OK);
+	}
+	
+	@PutMapping("/user")
+	public ResponseEntity<User> updateUser(@RequestBody User userIn){
+		User updatedUser = userService.updateUser(userIn);
+		
+		return new ResponseEntity<User>(updatedUser, HttpStatus.OK);
 	}
 
 }

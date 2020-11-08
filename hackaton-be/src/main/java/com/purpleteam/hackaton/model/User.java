@@ -1,12 +1,13 @@
 package com.purpleteam.hackaton.model;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.purpleteam.hackaton.constants.OwnershipType;
 import com.purpleteam.hackaton.constants.PropertyType;
-import com.purpleteam.hackaton.constants.Provinces;
 
-// TODO : INCOMPLETE FORM!!
 @Document(collection = "users")
 public class User {
 
@@ -21,23 +22,21 @@ public class User {
 
 	private String password;
 
+	private Boolean hasFinishedQuestioneer;
+
 	private String phoneNumber;
 
 	private Double annualIncome;
 
 	private PropertyType propertyType;
 
-	private Integer nrOfBaths;
+	private String nrOfBaths;
 
-	private Provinces desiredProvince;
+	private String nrOfRooms;
 
-	private String desiredCity;
+	private OwnershipType desiredOwnershipType;
 
-	private String desiredStreet;
-
-	private String desiredStreetNumber;
-
-	private String postalCodel;
+	private List<String> desiredAddresses;
 
 	public String getId() {
 		return id;
@@ -103,72 +102,63 @@ public class User {
 		this.propertyType = propertyType;
 	}
 
-	public Integer getNrOfBaths() {
+	public Boolean getHasFinishedQuestioneer() {
+		return hasFinishedQuestioneer;
+	}
+
+	public void setHasFinishedQuestioneer(Boolean hasFinishedQuestioneer) {
+		this.hasFinishedQuestioneer = hasFinishedQuestioneer;
+	}
+
+	public String getNrOfBaths() {
 		return nrOfBaths;
 	}
 
-	public void setNrOfBaths(Integer nrOfBaths) {
+	public void setNrOfBaths(String nrOfBaths) {
 		this.nrOfBaths = nrOfBaths;
 	}
 
-	public Provinces getDesiredProvince() {
-		return desiredProvince;
+	public String getNrOfRooms() {
+		return nrOfRooms;
 	}
 
-	public void setDesiredProvince(Provinces desiredProvince) {
-		this.desiredProvince = desiredProvince;
+	public void setNrOfRooms(String nrOfRooms) {
+		this.nrOfRooms = nrOfRooms;
 	}
 
-	public String getDesiredCity() {
-		return desiredCity;
+	public OwnershipType getDesiredOwnershipType() {
+		return desiredOwnershipType;
 	}
 
-	public void setDesiredCity(String desiredCity) {
-		this.desiredCity = desiredCity;
+	public void setDesiredOwnershipType(OwnershipType desiredOwnershipType) {
+		this.desiredOwnershipType = desiredOwnershipType;
 	}
 
-	public String getDesiredStreet() {
-		return desiredStreet;
+	public List<String> getDesiredAddresses() {
+		return desiredAddresses;
 	}
 
-	public void setDesiredStreet(String desiredStreet) {
-		this.desiredStreet = desiredStreet;
+	public void setDesiredAddresses(List<String> desiredAddresses) {
+		this.desiredAddresses = desiredAddresses;
 	}
 
-	public String getDesiredStreetNumber() {
-		return desiredStreetNumber;
-	}
-
-	public void setDesiredStreetNumber(String desiredStreetNumber) {
-		this.desiredStreetNumber = desiredStreetNumber;
-	}
-
-	public String getPostalCodel() {
-		return postalCodel;
-	}
-
-	public void setPostalCodel(String postalCodel) {
-		this.postalCodel = postalCodel;
-	}
-
-	public User(String id, String firstName, String lastName, String email, String password, String phoneNumber,
-			Double annualIncome, PropertyType propertyType, Integer nrOfBaths, Provinces desiredProvince,
-			String desiredCity, String desiredStreet, String desiredStreetNumber, String postalCodel) {
+	public User(String id, String firstName, String lastName, String email, String password,
+			Boolean hasFinishedQuestioneer, String phoneNumber, Double annualIncome, PropertyType propertyType,
+			String nrOfBaths, String nrOfRooms, OwnershipType desiredOwnershipType, List<String> desiredAddresses) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
+		this.hasFinishedQuestioneer = hasFinishedQuestioneer;
 		this.phoneNumber = phoneNumber;
 		this.annualIncome = annualIncome;
 		this.propertyType = propertyType;
 		this.nrOfBaths = nrOfBaths;
-		this.desiredProvince = desiredProvince;
-		this.desiredCity = desiredCity;
-		this.desiredStreet = desiredStreet;
-		this.desiredStreetNumber = desiredStreetNumber;
-		this.postalCodel = postalCodel;
+		this.nrOfRooms = nrOfRooms;
+		this.desiredOwnershipType = desiredOwnershipType;
+		this.desiredAddresses = desiredAddresses;
 	}
 
 }
