@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UniversalModel } from '../models/universal-model';
@@ -10,16 +10,27 @@ import { UserLoginDTO } from '../models/user-login';
 
 export class UserService{
 
-    private baseUrl = "http://localhost:8080/api"
+    private baseUrl = "http://localhost:8080/api/user"
     
     constructor(private http: HttpClient){}
 
-    loginUser(userLoginDTO: UserLoginDTO): Observable<UniversalModel>{
-        return this.http.post<UniversalModel>(this.baseUrl + "/login/user", userLoginDTO);
+    loginUser(userEmail: string, userPassword: string): Observable<UniversalModel>{
+        return this.http.get<UniversalModel>(this.baseUrl + "/login", {
+            params: new HttpParams()
+            .set('userEmail',userEmail)
+            .set('userPassword', userPassword)
+        });
     }
 
     createUser(user: UniversalModel): Observable<UniversalModel>{
-        return this.http.post<UniversalModel>(this.baseUrl + "/user", user);
+        return this.http.post<UniversalModel>(this.baseUrl, user);
+    }
+
+    getUserAffordability(userAnnualIncome: number): Observable<number>{
+        let param: any = { 'userAnnualIncome': userAnnualIncome };
+        return this.http.get<number>(this.baseUrl + "/affordability",{
+            params: param
+        });
     }
 
 }

@@ -28,6 +28,10 @@ public class User {
 
 	private Double annualIncome;
 
+	private Double downPayment;
+
+	private Double otherDebtPayents;
+
 	private PropertyType propertyType;
 
 	private String nrOfBaths;
@@ -37,6 +41,12 @@ public class User {
 	private OwnershipType desiredOwnershipType;
 
 	private List<String> desiredAddresses;
+
+	private Double generatedMaximumAffordability;
+
+	private Double mortgagePayment;
+
+	private Double otherHousingCosts;
 
 	public String getId() {
 		return id;
@@ -142,9 +152,51 @@ public class User {
 		this.desiredAddresses = desiredAddresses;
 	}
 
+	public Double getGeneratedMaximumAffordability() {
+		return generatedMaximumAffordability;
+	}
+
+	public void setGeneratedMaximumAffordability(Double generatedMaximumAffordability) {
+		this.generatedMaximumAffordability = generatedMaximumAffordability;
+	}
+
+	public Double getMortgagePayment() {
+		return mortgagePayment;
+	}
+
+	public void setMortgagePayment(Double mortgagePayment) {
+		this.mortgagePayment = mortgagePayment;
+	}
+
+	public Double getOtherHousingCosts() {
+		return otherHousingCosts;
+	}
+
+	public void setOtherHousingCosts(Double otherHousingCosts) {
+		this.otherHousingCosts = otherHousingCosts;
+	}
+
+	public Double getDownPayment() {
+		return downPayment;
+	}
+
+	public void setDownPayment(Double downPayment) {
+		this.downPayment = downPayment;
+	}
+
+	public Double getOtherDebtPayents() {
+		return otherDebtPayents;
+	}
+
+	public void setOtherDebtPayents(Double otherDebtPayents) {
+		this.otherDebtPayents = otherDebtPayents;
+	}
+
 	public User(String id, String firstName, String lastName, String email, String password,
-			Boolean hasFinishedQuestioneer, String phoneNumber, Double annualIncome, PropertyType propertyType,
-			String nrOfBaths, String nrOfRooms, OwnershipType desiredOwnershipType, List<String> desiredAddresses) {
+			Boolean hasFinishedQuestioneer, String phoneNumber, Double annualIncome, Double downPayment,
+			Double otherDebtPayents, PropertyType propertyType, String nrOfBaths, String nrOfRooms,
+			OwnershipType desiredOwnershipType, List<String> desiredAddresses, Double generatedMaximumAffordability,
+			Double mortgagePayment, Double otherHousingCosts) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -154,11 +206,16 @@ public class User {
 		this.hasFinishedQuestioneer = hasFinishedQuestioneer;
 		this.phoneNumber = phoneNumber;
 		this.annualIncome = annualIncome;
+		this.downPayment = downPayment;
+		this.otherDebtPayents = otherDebtPayents;
 		this.propertyType = propertyType;
 		this.nrOfBaths = nrOfBaths;
 		this.nrOfRooms = nrOfRooms;
 		this.desiredOwnershipType = desiredOwnershipType;
 		this.desiredAddresses = desiredAddresses;
+		this.generatedMaximumAffordability = generatedMaximumAffordability;
+		this.mortgagePayment = mortgagePayment;
+		this.otherHousingCosts = otherHousingCosts;
 	}
 
 }
