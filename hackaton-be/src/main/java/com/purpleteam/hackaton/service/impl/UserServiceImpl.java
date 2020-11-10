@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
 		
 		if(user.getAnnualIncome() != null && user.getHasFinishedQuestioneer()) {
 		 userAff = new UserAffordabilityDTO(user.getId(), user.getAnnualIncome(), user.getDownPayment(), user.getOtherHousingCosts() != null ? user.getOtherHousingCosts() : null,
-											user.getOtherDebtPayents(), null, null, null);
+											user.getOtherDebtPayments(), null, null, null);
 		 userAff = generateUserAffordability(userAff);
 		 
 		 return userRepostiroy.findById(user.getId()).get();
@@ -92,7 +92,7 @@ public class UserServiceImpl implements UserService {
 		userFromDb.get().setMortgagePayment(Double.valueOf(userAffordabilityDTO.getMortgagePayment().intValue()));
 		userFromDb.get().setOtherHousingCosts(userAffordabilityDTO.getMonthlyHousingCosts());
 		userFromDb.get().setDownPayment(userAffordabilityDTO.getDownPayment());
-		userFromDb.get().setOtherDebtPayents(userAffordabilityDTO.getMonthlyDebtPayments());
+		userFromDb.get().setOtherDebtPayments(userAffordabilityDTO.getMonthlyDebtPayments());
 		userFromDb.get().setAnnualIncome(userAffordabilityDTO.getAnnualIncome());
 
 		userRepostiroy.save(userFromDb.get());

@@ -30,7 +30,7 @@ public class User {
 
 	private Double downPayment;
 
-	private Double otherDebtPayents;
+	private Double otherDebtPayments;
 
 	private PropertyType propertyType;
 
@@ -184,12 +184,12 @@ public class User {
 		this.downPayment = downPayment;
 	}
 
-	public Double getOtherDebtPayents() {
-		return otherDebtPayents;
+	public Double getOtherDebtPayments() {
+		return otherDebtPayments;
 	}
 
-	public void setOtherDebtPayents(Double otherDebtPayents) {
-		this.otherDebtPayents = otherDebtPayents;
+	public void setOtherDebtPayments(Double otherDebtPayents) {
+		this.otherDebtPayments = otherDebtPayents;
 	}
 
 	public User(String id, String firstName, String lastName, String email, String password,
@@ -207,7 +207,7 @@ public class User {
 		this.phoneNumber = phoneNumber;
 		this.annualIncome = annualIncome;
 		this.downPayment = downPayment;
-		this.otherDebtPayents = otherDebtPayents;
+		this.otherDebtPayments = otherDebtPayents;
 		this.propertyType = propertyType;
 		this.nrOfBaths = nrOfBaths;
 		this.nrOfRooms = nrOfRooms;
