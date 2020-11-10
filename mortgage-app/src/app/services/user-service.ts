@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { UserAffordabilityDTO } from '../dtoModels/user-affordability-dto';
 import { UniversalModel } from '../models/universal-model';
 import { UserLoginDTO } from '../models/user-login';
 
@@ -26,11 +27,12 @@ export class UserService{
         return this.http.post<UniversalModel>(this.baseUrl, user);
     }
 
-    getUserAffordability(userAnnualIncome: number): Observable<number>{
-        let param: any = { 'userAnnualIncome': userAnnualIncome };
-        return this.http.get<number>(this.baseUrl + "/affordability",{
-            params: param
-        });
+    updateUser(user: UniversalModel): Observable<UniversalModel>{
+        return this.http.put<UniversalModel>(this.baseUrl, user);
+    }
+
+    getUserAffordability(userAffDTO: UserAffordabilityDTO): Observable<UserAffordabilityDTO>{
+        return this.http.post<UserAffordabilityDTO>(this.baseUrl + "/affordability", userAffDTO);
     }
 
 }
