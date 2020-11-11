@@ -1,1 +1,15 @@
-<p>mortgage-results works!</p>
+<div class="container" style="overflow: hidden;">
+    <div class="space-between-title"></div>
+    <div style="float: left; margin-left:1rem;">
+        <img src="../../../assets/Icon-Back Arrow.svg" class="center-element" (click)="backPage()"/>
+    </div>
+    <div style="float: right;margin-right: -6rem;margin-left: 4rem;margin-top: -6rem;">
+        <img src="../../../assets/Circle.png" class="center-element" />
+    </div>
+    <div class="space-between-title"></div>
+    <div id="results-title">Good news! You may be able to buy a home priced up to <span style="color:#84ADAE">{{getHomePrice()}}</span></div>
+    <div style="margin-top: 20px;">
+        <button id="pre-approved-btn" class="center-element">Get Pre-approved</button>
+    </div>
+    <div class="space-between-title"></div>
+</div>

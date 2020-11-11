@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GetStartedPageComponent } from './components/get-started-page/get-started-page.component';
 import { LoginComponent } from './components/login/login.component';
+import { MortgageResultsComponent } from './components/mortgage-results/mortgage-results.component';
 import { Question1Component } from './components/question1/question1.component';
 import { Question2Component } from './components/question2/question2.component';
 import { Question3Component } from './components/question3/question3.component';
@@ -12,6 +13,7 @@ import { Question7Component } from './components/question7/question7.component';
 
 const routes: Routes = [
    { path: 'welcome-page', component: GetStartedPageComponent },
+   { path: 'mortgage-results', component: MortgageResultsComponent },
    { path: 'login-page', component: LoginComponent },
    { path: 'question1', component: Question1Component },
    { path: 'question2', component: Question2Component },

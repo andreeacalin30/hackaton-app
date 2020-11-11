@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mortgage-results',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mortgage-results.component.scss']
 })
 export class MortgageResultsComponent implements OnInit {
-
-  constructor() { }
+  public homePrice = 123456;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  public getHomePrice(){
+    var resultValue=this.homePrice.toLocaleString("en-US", 
+    {style:"currency", currency: "USD",minimumFractionDigits: 0,maximumFractionDigits: 0});
+    return resultValue;
+  }
+
+  backPage(){
+    this.router.navigate(['question7']);
   }
 
 }
