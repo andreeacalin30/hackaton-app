@@ -14,14 +14,20 @@ export class UniversalModel{
     hasFinishedQuestioneer: boolean;
     phoneNumber: string;
     anualIncome: number;
+    downPayment: number;
+    otherDebtPayments: number
     propertyType: PropertyType;
     nrOfBaths: string;
     nrOfRooms: string;
     desiredOwnershipType: OwnershipType;
     desiredAddresses: string[];
+    generatedMaximumAffordability: number;
+    mortgagePayment: number;
+    otherHousingCosts: number;
 
-    constructor(id: string, firstName: string, lastName: string, email: string, password: string, hasFinishedQuestioneer: boolean, phoneNumber: string, annualIncome: number, propertyType: PropertyType,
-        nrOfBaths: string, nrOfRooms: string, desiredOwnershipType: OwnershipType, desiredAddresses: string[]){
+    constructor(id: string, firstName: string, lastName: string, email: string, password: string, hasFinishedQuestioneer: boolean, phoneNumber: string,
+        annualIncome: number, downPayment: number, otherDebtPayments:number, propertyType: PropertyType, nrOfBaths: string, nrOfRooms: string,
+        desiredOwnershipType: OwnershipType, desiredAddresses: string[], generatedMaximumAffordability: number, mortgagePayment: number, otherHousingCosts: number){
             this.id = id;
             this.firstName = firstName;
             this.lastName = lastName;
@@ -30,11 +36,16 @@ export class UniversalModel{
             this.hasFinishedQuestioneer = hasFinishedQuestioneer;
             this.phoneNumber = phoneNumber;
             this.anualIncome = annualIncome;
+            this.downPayment = downPayment;
+            this.otherDebtPayments = otherDebtPayments;
             this.propertyType = propertyType;
             this.nrOfBaths = nrOfBaths;
             this.nrOfRooms = nrOfRooms;
             this.desiredOwnershipType = desiredOwnershipType;
             this.desiredAddresses = desiredAddresses;
+            this.generatedMaximumAffordability = generatedMaximumAffordability;
+            this.mortgagePayment = mortgagePayment;
+            this.otherHousingCosts = otherHousingCosts;
     }
 
     get getId(): string{
