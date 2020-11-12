@@ -1,1 +1,57 @@
-<p>mortgage-results works!</p>
+<div class="container" style="overflow: hidden;">
+    <div class="space-between-title"></div>
+    <div style="float: left; margin-left:1rem;">
+        <img src="../../../assets/Icon-Back Arrow.svg" class="center-element" (click)="backPage()"/>
+    </div>
+    <div style="float: right;margin-right: -6rem;margin-left: 4rem;margin-top: -6rem;">
+        <img src="../../../assets/Circle.png" class="center-element" />
+    </div>
+    <div class="space-between-title"></div>
+    <div id="results-title">Good news! You may be able to buy a home priced up to <span style="color:#84ADAE">{{getHomePrice()}}</span></div>
+    <div style="margin-top: 20px;">
+        <button  class="center-element big-button">Get Pre-approved</button>
+    </div>
+    <div class="space-between-title"></div>
+    <div id="results-area">
+        <div id="edit-button">
+            <img id="edit-icon" src="../../../assets/pencil.svg">
+        </div>
+        <div id="results-info">
+            Based on your answers, here's your monthly cost breakdown
+        </div>
+        <div id="mortgage-results" style="display: flex;">
+            <div id="square" style="background-color: #FFCEAC;">
+                <div style="height: 6px; width: 6px; background-color: white; float:right; margin-top: 5px; margin-right: 6px; border-radius: 10px;"></div>
+            </div>
+            <div id="subsection-info-div">Mortgage Payment</div>
+            <div id="mortgage-price">{{getMortgagePrice()}}</div>    
+            <div><img id="help-icon" src="../../../assets/help.svg"></div>      
+        </div>
+        <div id="housing-results" style="display: flex;">
+            <div id="square" style="background-color: #FFB6B6;">
+                <div style="height: 6px; width: 6px; background-color: white; float:right; margin-top: 5px; margin-right: 6px; border-radius: 10px;"></div>
+            </div>
+            <div id="subsection-info-div">Other Housing Costs</div>
+            <div id="housing-price">{{getHousingPrice()}}</div>    
+            <div><img id="help-icon" src="../../../assets/help.svg"></div>        
+        </div>
+        <div id="other-costs-results" style="display: flex;">
+            <div id="square" style="background-color: #9DB8E9;">
+                <div style="height: 6px; width: 6px; background-color: white; float:right; margin-top: 5px; margin-right: 6px; border-radius: 10px;"></div>
+            </div>
+            <div id="subsection-info-div">Remaining Cash</div>
+            <div id="other-costs">{{getRemainingCash()}}</div>   
+            <div><img id="help-icon" src="../../../assets/help.svg"></div>         
+        </div>
+    </div>
+    <div style="margin-top: 20px; display: flex;">
+        <div ><img id="bulb-icon" src="../../../assets/Icon-Bulb.svg"></div>
+        <div id="loans-info">
+            Based on a mortgage loan of {{getMortgageLoan()}}, {{yearsRates}} Year Fixed Rate Mortgage {{getFixedRate()}} over {{totalYears}} years.
+        </div>
+    </div>
+    <div>
+        <button class="center-element big-button" style="margin-top: 30px;">View Homes</button>
+    </div>
+    
+</div>
