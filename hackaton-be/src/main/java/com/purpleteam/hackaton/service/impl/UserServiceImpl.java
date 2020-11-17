@@ -79,7 +79,7 @@ public class UserServiceImpl implements UserService {
 
 		userAffordabilityDTO.setGeneratedMaximumAffordability(maximumAffordability);
 		// calculate the morgage payment per month for 25 years
-		userAffordabilityDTO.setMortgagePayment(maximumAffordability / 300);
+		userAffordabilityDTO.setMortgagePayment(calculateMonthlyMortgagePayent(maximumAffordability));
 		userAffordabilityDTO.setEstimatedRemainingCash(Utils.calculateRemainingCash(
 				userAffordabilityDTO.getAnnualIncome(), userAffordabilityDTO.getMortgagePayment()));
 
@@ -102,11 +102,12 @@ public class UserServiceImpl implements UserService {
 
 	private Double generateMaximumAffoedability(UserAffordabilityDTO userAffordabilityDTO) {
 		boolean isEligibbleForMortgage = false;
-		Double annualHousingCosts = 12 * userAffordabilityDTO.getMonthlyHousingCosts();
+		//TODO: decide how should we get this value for each city
+		Double annualHousingCosts = Double.valueOf(12 * 5600);
 		Double maximumAffordability;
+		
 
 		// Decide if user can afford a mortgage
-		// TODO: see how we shall implement Housing costs: it will come from fe added by
 		// user or from be based on province
 		if (userAffordabilityDTO.getMonthlyDebtPayments() == null) {
 			if (annualHousingCosts < 0.32 * userAffordabilityDTO.getAnnualIncome()) {
@@ -124,13 +125,18 @@ public class UserServiceImpl implements UserService {
 			throw new AppException("User is not eligible for a mortgage", HttpStatus.BAD_REQUEST);
 		}
 
-		if (userAffordabilityDTO.getDownPayment() <= Double.valueOf(25000)) {
-			maximumAffordability = userAffordabilityDTO.getDownPayment() * 20;
-		} else {
-			maximumAffordability = (userAffordabilityDTO.getDownPayment() - Double.valueOf(25000)) * 10
-					+ Double.valueOf(500000);
-		}
+		//maximum affordability is calculated based on annual income and multiplied by 4 years
+		maximumAffordability = userAffordabilityDTO.getAnnualIncome() * 4 * 12;
+		
 		return maximumAffordability;
+	}
+	
+
+	private Double calculateMonthlyMortgagePayent(Double maximumAffordability) {
+		//monthly rate
+		Double mounthlyRateWithoutRate = maximumAffordability / 300;
+		
+		return (mounthlyRateWithoutRate + (mounthlyRateWithoutRate * 0.0214));
 	}
 
 }
