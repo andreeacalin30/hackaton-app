@@ -20,7 +20,9 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MortgageResultsComponent } from './components/mortgage-results/mortgage-results.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
-import { ChatroomComponent } from './components/chatroom/chatroom.component';
+import { FindBrokersComponent } from './components/find-brokers/find-brokers.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,7 @@ import { ChatroomComponent } from './components/chatroom/chatroom.component';
     LoginComponent,
     MortgageResultsComponent,
     ChatbotComponent,
-    ChatroomComponent
+    FindBrokersComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +53,6 @@ import { ChatroomComponent } from './components/chatroom/chatroom.component';
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],
-  bootstrap: [AppComponent, ChatroomComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

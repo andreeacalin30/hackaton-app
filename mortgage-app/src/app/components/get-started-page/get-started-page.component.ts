@@ -17,4 +17,8 @@ export class GetStartedPageComponent implements OnInit {
     this.router.navigate(['/question1']);
   }
 
+  goBackToLogin(){
+    this.router.navigate(['/login-page']);
+  }
+
 }
