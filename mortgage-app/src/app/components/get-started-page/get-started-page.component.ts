@@ -13,8 +13,8 @@ export class GetStartedPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToLogin(){
-    this.router.navigate(['/login-page']);
+  goToQuestions(){
+    this.router.navigate(['/question1']);
   }
 
 }

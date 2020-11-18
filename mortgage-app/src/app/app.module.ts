@@ -19,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MortgageResultsComponent } from './components/mortgage-results/mortgage-results.component';
-
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
+import { ChatroomComponent } from './components/chatroom/chatroom.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,9 @@ import { MortgageResultsComponent } from './components/mortgage-results/mortgage
     Question6Component,
     Question7Component,
     LoginComponent,
-    MortgageResultsComponent
+    MortgageResultsComponent,
+    ChatbotComponent,
+    ChatroomComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +51,6 @@ import { MortgageResultsComponent } from './components/mortgage-results/mortgage
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, ChatroomComponent]
 })
 export class AppModule { }
