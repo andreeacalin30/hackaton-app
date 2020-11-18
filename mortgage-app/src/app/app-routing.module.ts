@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FindBrokersComponent } from './components/find-brokers/find-brokers.component';
 import { GetStartedPageComponent } from './components/get-started-page/get-started-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { MortgageResultsComponent } from './components/mortgage-results/mortgage-results.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
    { path: 'question4', component: Question4Component },
    { path: 'question5', component: Question5Component },
    { path: 'question6', component: Question6Component },
-   { path: 'question7', component: Question7Component }
+   { path: 'question7', component: Question7Component },
+   { path: 'find-brokers', component: FindBrokersComponent }
 ];
 
 @NgModule({
