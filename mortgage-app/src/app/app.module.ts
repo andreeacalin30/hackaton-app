@@ -19,6 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MortgageResultsComponent } from './components/mortgage-results/mortgage-results.component';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
+import { FindBrokersComponent } from './components/find-brokers/find-brokers.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { MortgageResultsComponent } from './components/mortgage-results/mortgage
     Question6Component,
     Question7Component,
     LoginComponent,
-    MortgageResultsComponent
+    MortgageResultsComponent,
+    ChatbotComponent,
+    FindBrokersComponent
   ],
   imports: [
     BrowserModule,

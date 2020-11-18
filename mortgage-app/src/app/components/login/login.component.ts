@@ -24,11 +24,13 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser(){
+    debugger;
     if(this.loginForm.valid){
       var username= this.loginForm.get("username").value;
       var password= this.loginForm.get("password").value;
       this.userLoginDTO  =new UserLoginDTO(username, password);
       this.userService.loginUser(this.userLoginDTO).subscribe(result=>{
+        console.log(result)
         if(result.email==username){
           this.router.navigate(['/welcome-page']);
           this.invalidLogin=false;
