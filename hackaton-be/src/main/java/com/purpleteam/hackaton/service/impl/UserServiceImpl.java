@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import com.purpleteam.hackaton.dto.UserAffordabilityDTO;
+import com.purpleteam.hackaton.constants.PropertyType;
 import com.purpleteam.hackaton.exception.AppException;
 import com.purpleteam.hackaton.model.User;
 import com.purpleteam.hackaton.repository.UserRepository;
@@ -22,24 +22,15 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User createUser(User user) {
-		UserAffordabilityDTO userAff = new UserAffordabilityDTO();
-		//Checks if email already exists
+		// Checks if email already exists
 		Optional<User> existingUser = userRepostiroy.findByEmail(user.getEmail());
-		if(existingUser.isPresent()) {
+		if (existingUser.isPresent()) {
 			throw new AppException("User already exists with this email", HttpStatus.BAD_REQUEST);
 		}
 		user.setId(UUID.randomUUID().toString());
-		
+
 		User insertedUser = userRepostiroy.insert(user);
-		
-		if(user.getAnnualIncome() != null && user.getHasFinishedQuestioneer()) {
-		 userAff = new UserAffordabilityDTO(user.getId(), user.getAnnualIncome(), user.getDownPayment(), user.getOtherHousingCosts() != null ? user.getOtherHousingCosts() : null,
-											user.getOtherDebtPayments(), null, null, null);
-		 userAff = generateUserAffordability(userAff);
-		 
-		 return userRepostiroy.findById(user.getId()).get();
-		}				
-		
+
 		return insertedUser;
 	}
 
@@ -68,55 +59,62 @@ public class UserServiceImpl implements UserService {
 			throw new AppException("User does not exist in DB", HttpStatus.BAD_REQUEST);
 		}
 
+		if (userIn.getHasFinishedQuestioneer()) {
+			generateUserAffordability(userIn, true);
+		}
+
 		User updatedUser = userRepostiroy.save(userIn);
 
 		return updatedUser;
 	}
 
 	@Override
-	public UserAffordabilityDTO generateUserAffordability(UserAffordabilityDTO userAffordabilityDTO) {
-		Double maximumAffordability = generateMaximumAffoedability(userAffordabilityDTO);
+	public User generateUserAffordability(User userIn, boolean fromUpdateUser) {
+		Double maximumAffordability = generateMaximumAffordability(userIn);
 
-		userAffordabilityDTO.setGeneratedMaximumAffordability(maximumAffordability);
+		userIn.setGeneratedMaximumAffordability(maximumAffordability);
 		// calculate the morgage payment per month for 25 years
-		userAffordabilityDTO.setMortgagePayment(calculateMonthlyMortgagePayent(maximumAffordability));
-		userAffordabilityDTO.setEstimatedRemainingCash(Utils.calculateRemainingCash(
-				userAffordabilityDTO.getAnnualIncome(), userAffordabilityDTO.getMortgagePayment()));
+		userIn.setMortgagePayment(calculateMonthlyMortgagePayent(maximumAffordability));
+		userIn.setEstimatedRemainingCash(
+				Utils.calculateRemainingCash(userIn.getAnnualIncome(), userIn.getMortgagePayment(), userIn.getOtherHousingCosts()));
 
 		// Update user with generated values;
-		Optional<User> userFromDb = userRepostiroy.findById(userAffordabilityDTO.getUserId());
+		Optional<User> userFromDb = userRepostiroy.findById(userIn.getId());
 		if (!userFromDb.isPresent()) {
 			throw new AppException("User does not exist in DB", HttpStatus.BAD_REQUEST);
 		}
-		userFromDb.get().setGeneratedMaximumAffordability(userAffordabilityDTO.getGeneratedMaximumAffordability());
-		userFromDb.get().setMortgagePayment(Double.valueOf(userAffordabilityDTO.getMortgagePayment().intValue()));
-		userFromDb.get().setOtherHousingCosts(userAffordabilityDTO.getMonthlyHousingCosts());
-		userFromDb.get().setDownPayment(userAffordabilityDTO.getDownPayment());
-		userFromDb.get().setOtherDebtPayments(userAffordabilityDTO.getMonthlyDebtPayments());
-		userFromDb.get().setAnnualIncome(userAffordabilityDTO.getAnnualIncome());
 
-		userRepostiroy.save(userFromDb.get());
+		if (!fromUpdateUser) {
+			userRepostiroy.save(userIn);
+		}
 
-		return userAffordabilityDTO;
+		return userIn;
 	}
 
-	private Double generateMaximumAffoedability(UserAffordabilityDTO userAffordabilityDTO) {
-		boolean isEligibbleForMortgage = false;
-		//TODO: decide how should we get this value for each city
-		Double annualHousingCosts = Double.valueOf(12 * 5600);
+	private Double generateMaximumAffordability(User user) {
+		boolean isEligibbleForMortgage = false;		
 		Double maximumAffordability;
-		
+
+		populateOtherExpensesNoValuesAreGiven(user);
+		Double monthlyHousingCosts = user.getOtherExpenses().getCondoFees() + user.getOtherExpenses().getHeatingCosts() +
+				user.getOtherExpenses().getPropertyTax();
 
 		// Decide if user can afford a mortgage
 		// user or from be based on province
-		if (userAffordabilityDTO.getMonthlyDebtPayments() == null) {
-			if (annualHousingCosts < 0.32 * userAffordabilityDTO.getAnnualIncome()) {
+		if (user.getDebtPayments().getCreditCard() == null && user.getDebtPayments().getCarPayment() == null
+				&& user.getDebtPayments().getOtherLoanExpenses() == null) {
+			if (monthlyHousingCosts < 0.32 * user.getAnnualIncome()) {
+				user.setOtherHousingCosts(monthlyHousingCosts);
 				isEligibbleForMortgage = true;
 			}
-		} else {
-			Double totalDebtLoad = annualHousingCosts + 12 * userAffordabilityDTO.getMonthlyDebtPayments();
+		} else{
+			Double totalMonthlyDebts = user.getDebtPayments().getCarPayment() == null ? 0 : user.getDebtPayments().getCarPayment();
+			totalMonthlyDebts += user.getDebtPayments().getCreditCard() == null ? 0 : user.getDebtPayments().getCreditCard();
+			totalMonthlyDebts += user.getDebtPayments().getOtherLoanExpenses() == null ? 0 : user.getDebtPayments().getOtherLoanExpenses();
+			
+			Double totalMonthlyDebtLoad = monthlyHousingCosts + totalMonthlyDebts;
 
-			if (totalDebtLoad < 0.4 * userAffordabilityDTO.getAnnualIncome()) {
+			if (totalMonthlyDebtLoad < 0.4 * user.getAnnualIncome()) {
 				isEligibbleForMortgage = true;
 			}
 		}
@@ -125,17 +123,31 @@ public class UserServiceImpl implements UserService {
 			throw new AppException("User is not eligible for a mortgage", HttpStatus.BAD_REQUEST);
 		}
 
-		//maximum affordability is calculated based on annual income and multiplied by 4 years
-		maximumAffordability = userAffordabilityDTO.getAnnualIncome() * 4 * 12;
-		
+		// maximum affordability is calculated based on annual income and multiplied by
+		// 4 years
+		maximumAffordability = user.getAnnualIncome() * 4 * 12;
+
 		return maximumAffordability;
 	}
-	
+
+	private void populateOtherExpensesNoValuesAreGiven(User user) {
+		if (user.getOtherExpenses().getPropertyTax() == null) {
+			// We took the average housing cost for torronto
+			user.getOtherExpenses().setPropertyTax(Double.valueOf(Integer.valueOf(2999))/12);
+		}
+		if(user.getPropertyType().equals(PropertyType.CONDO) && user.getOtherExpenses().getCondoFees() == null) {
+			user.getOtherExpenses().setCondoFees(Double.valueOf(Integer.valueOf(250)));
+		}
+		if(user.getOtherExpenses().getHeatingCosts() == null) {
+			user.getOtherExpenses().setHeatingCosts(Double.valueOf(Integer.valueOf(45)));
+		}
+
+	}
 
 	private Double calculateMonthlyMortgagePayent(Double maximumAffordability) {
-		//monthly rate
+		// monthly rate
 		Double mounthlyRateWithoutRate = maximumAffordability / 300;
-		
+
 		return (mounthlyRateWithoutRate + (mounthlyRateWithoutRate * 0.0214));
 	}
 

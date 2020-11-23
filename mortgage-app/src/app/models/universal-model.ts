@@ -4,6 +4,8 @@ import { NumberValueAccessor } from '@angular/forms';
 import { PropertyType } from './property-enum';
 import { Provinces } from './province-enum';
 import { OwnershipType } from './ownership-enum'
+import { DebtPayments } from './debts-payments';
+import { OtherExpenses } from './other-expenses';
 
 export class UniversalModel{
     id: string;
@@ -15,7 +17,10 @@ export class UniversalModel{
     phoneNumber: string;
     anualIncome: number;
     downPayment: number;
-    otherDebtPayments: number
+    debtPayments: DebtPayments
+    otherExpenes: OtherExpenses;
+    estimatedRemainingCash: number;
+    otherHousingCosts: number;
     propertyType: PropertyType;
     nrOfBaths: string;
     nrOfRooms: string;
@@ -23,11 +28,12 @@ export class UniversalModel{
     desiredAddresses: string[];
     generatedMaximumAffordability: number;
     mortgagePayment: number;
-    otherHousingCosts: number;
+   
 
     constructor(id: string, firstName: string, lastName: string, email: string, password: string, hasFinishedQuestioneer: boolean, phoneNumber: string,
-        annualIncome: number, downPayment: number, otherDebtPayments:number, propertyType: PropertyType, nrOfBaths: string, nrOfRooms: string,
-        desiredOwnershipType: OwnershipType, desiredAddresses: string[], generatedMaximumAffordability: number, mortgagePayment: number, otherHousingCosts: number){
+        annualIncome: number, downPayment: number, debtPayments:DebtPayments, otherExpenses: OtherExpenses, estimatedRemainingCash: number,
+        propertyType: PropertyType, nrOfBaths: string, nrOfRooms: string, desiredOwnershipType: OwnershipType, desiredAddresses: string[],
+         generatedMaximumAffordability: number, mortgagePayment: number, otherHousingCosts: number){
             this.id = id;
             this.firstName = firstName;
             this.lastName = lastName;
@@ -37,7 +43,9 @@ export class UniversalModel{
             this.phoneNumber = phoneNumber;
             this.anualIncome = annualIncome;
             this.downPayment = downPayment;
-            this.otherDebtPayments = otherDebtPayments;
+            this.debtPayments = debtPayments;
+            this.otherExpenes = otherExpenses;
+            this.otherHousingCosts = otherHousingCosts;
             this.propertyType = propertyType;
             this.nrOfBaths = nrOfBaths;
             this.nrOfRooms = nrOfRooms;

@@ -31,8 +31,8 @@ export class UserService{
         return this.http.put<UniversalModel>(this.baseUrl, user);
     }
 
-    getUserAffordability(userAffDTO: UserAffordabilityDTO): Observable<UserAffordabilityDTO>{
-        return this.http.post<UserAffordabilityDTO>(this.baseUrl + "/affordability", userAffDTO);
+    getUserAffordability(user: UniversalModel): Observable<UniversalModel>{
+        return this.http.post<UniversalModel>(this.baseUrl + "/affordability", user);
     }
 
 }

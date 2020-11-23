@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.purpleteam.hackaton.dto.UserAffordabilityDTO;
 import com.purpleteam.hackaton.model.User;
 import com.purpleteam.hackaton.service.UserService;
 
@@ -46,10 +45,10 @@ public class UserController {
 	}
 	
 	@PostMapping("/user/affordability")
-	public ResponseEntity<UserAffordabilityDTO> getUserAffordability(@RequestBody UserAffordabilityDTO userAffordabilityDTO){
-		UserAffordabilityDTO userAffordabilityOut = userService.generateUserAffordability(userAffordabilityDTO);
+	public ResponseEntity<User> getUserAffordability(@RequestBody User userIn){
+		User userAffordabilityOut = userService.generateUserAffordability(userIn, false);
 		
-		return new ResponseEntity<UserAffordabilityDTO>(userAffordabilityOut, HttpStatus.OK);
+		return new ResponseEntity<User>(userAffordabilityOut, HttpStatus.OK);
 		
 	}
 

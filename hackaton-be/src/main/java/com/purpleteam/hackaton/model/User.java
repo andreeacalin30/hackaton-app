@@ -30,7 +30,13 @@ public class User {
 
 	private Double downPayment;
 
-	private Double otherDebtPayments;
+	private DebtPayments debtPayments;
+
+	private OtherExpenses otherExpenses;
+
+	private Double estimatedRemainingCash;
+
+	private Double otherHousingCosts;
 
 	private PropertyType propertyType;
 
@@ -45,8 +51,6 @@ public class User {
 	private Double generatedMaximumAffordability;
 
 	private Double mortgagePayment;
-
-	private Double otherHousingCosts;
 
 	public String getId() {
 		return id;
@@ -168,14 +172,6 @@ public class User {
 		this.mortgagePayment = mortgagePayment;
 	}
 
-	public Double getOtherHousingCosts() {
-		return otherHousingCosts;
-	}
-
-	public void setOtherHousingCosts(Double otherHousingCosts) {
-		this.otherHousingCosts = otherHousingCosts;
-	}
-
 	public Double getDownPayment() {
 		return downPayment;
 	}
@@ -184,19 +180,44 @@ public class User {
 		this.downPayment = downPayment;
 	}
 
-	public Double getOtherDebtPayments() {
-		return otherDebtPayments;
+	public DebtPayments getDebtPayments() {
+		return debtPayments;
 	}
 
-	public void setOtherDebtPayments(Double otherDebtPayents) {
-		this.otherDebtPayments = otherDebtPayents;
+	public void setDebtPayments(DebtPayments debtPayments) {
+		this.debtPayments = debtPayments;
+	}
+
+	public OtherExpenses getOtherExpenses() {
+		return otherExpenses;
+	}
+
+	public void setOtherExpenses(OtherExpenses otherExpenses) {
+		this.otherExpenses = otherExpenses;
+	}
+
+	public Double getEstimatedRemainingCash() {
+		return estimatedRemainingCash;
+	}
+
+	public void setEstimatedRemainingCash(Double estimatedRemainingCash) {
+		this.estimatedRemainingCash = estimatedRemainingCash;
+	}
+
+	public Double getOtherHousingCosts() {
+		return otherHousingCosts;
+	}
+
+	public void setOtherHousingCosts(Double otherHousingCosts) {
+		this.otherHousingCosts = otherHousingCosts;
 	}
 
 	public User(String id, String firstName, String lastName, String email, String password,
 			Boolean hasFinishedQuestioneer, String phoneNumber, Double annualIncome, Double downPayment,
-			Double otherDebtPayents, PropertyType propertyType, String nrOfBaths, String nrOfRooms,
+			DebtPayments debtPayments, OtherExpenses otherExpenses, Double estimatedRemainingCash,
+			Double otherHousingCosts, PropertyType propertyType, String nrOfBaths, String nrOfRooms,
 			OwnershipType desiredOwnershipType, List<String> desiredAddresses, Double generatedMaximumAffordability,
-			Double mortgagePayment, Double otherHousingCosts) {
+			Double mortgagePayment) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -207,7 +228,10 @@ public class User {
 		this.phoneNumber = phoneNumber;
 		this.annualIncome = annualIncome;
 		this.downPayment = downPayment;
-		this.otherDebtPayments = otherDebtPayents;
+		this.debtPayments = debtPayments;
+		this.otherExpenses = otherExpenses;
+		this.estimatedRemainingCash = estimatedRemainingCash;
+		this.otherHousingCosts = otherHousingCosts;
 		this.propertyType = propertyType;
 		this.nrOfBaths = nrOfBaths;
 		this.nrOfRooms = nrOfRooms;
@@ -215,7 +239,6 @@ public class User {
 		this.desiredAddresses = desiredAddresses;
 		this.generatedMaximumAffordability = generatedMaximumAffordability;
 		this.mortgagePayment = mortgagePayment;
-		this.otherHousingCosts = otherHousingCosts;
 	}
 
 }
