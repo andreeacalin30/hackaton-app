@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GetStartedPageComponent } from './components/get-started-page/get-started-page.component';
+import { MapPageMockComponent } from './components/map-page-mock/map-page-mock.component';
+import { MapPageComponent } from './components/map-page/map-page.component';
 import { Question1Component } from './components/question1/question1.component';
 import { Question2Component } from './components/question2/question2.component';
 import { Question3Component } from './components/question3/question3.component';
@@ -17,7 +19,9 @@ const routes: Routes = [
    { path: 'question4', component: Question4Component },
    { path: 'question5', component: Question5Component },
    { path: 'question6', component: Question6Component },
-   { path: 'question7', component: Question7Component }
+   { path: 'question7', component: Question7Component },
+   { path: 'map-page', component: MapPageComponent },
+   { path: 'map-page-mock', component: MapPageMockComponent }
 ];
 
 @NgModule({

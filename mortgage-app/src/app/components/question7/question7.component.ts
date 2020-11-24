@@ -12,7 +12,7 @@ export class Question7Component implements OnInit {
 
   ngOnInit(): void {}
     nextPage() {
-      this.router.navigate(['question7']);
+      this.router.navigate(['map-page-mock']);
     }
   
     backPage() {

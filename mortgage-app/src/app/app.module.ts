@@ -13,6 +13,8 @@ import { Question4Component } from './components/question4/question4.component';
 import { Question5Component } from './components/question5/question5.component';
 import { Question6Component } from './components/question6/question6.component';
 import { Question7Component } from './components/question7/question7.component';
+import { MapPageComponent } from './components/map-page/map-page.component';
+import { MapPageMockComponent } from './components/map-page-mock/map-page-mock.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { Question7Component } from './components/question7/question7.component';
     Question4Component,
     Question5Component,
     Question6Component,
-    Question7Component
+    Question7Component,
+    MapPageComponent,
+    MapPageMockComponent
   ],
   imports: [
     BrowserModule,
