@@ -1,6 +1,9 @@
 <div id="container-div">
-    <div id="broker-image">
-        <img src="">
+    <div *ngFor="let broker of brokers">
+        <div>
+        <img class="broker-image" src={{broker.img}}  [ngStyle]="{'margin-top.px': broker.top, 'margin-left.px': broker.left}">
+        </div>
     </div>
+    
 
 </div>
