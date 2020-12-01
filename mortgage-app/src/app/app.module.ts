@@ -21,6 +21,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MortgageResultsComponent } from './components/mortgage-results/mortgage-results.component';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
 import { FindBrokersComponent } from './components/find-brokers/find-brokers.component';
+import { PreQ1Component } from './components/pre-approval/pre-q1/pre-q1.component';
+import { PreQ6Component } from './components/pre-approval/pre-q6/pre-q6.component';
+import { PreQ7Component } from './components/pre-approval/pre-q7/pre-q7.component';
+import { PreQ2Component } from './components/pre-approval/pre-q2/pre-q2.component';
+import { PreQ3Component } from './components/pre-approval/pre-q3/pre-q3.component';
+import { PreQ4Component } from './components/pre-approval/pre-q4/pre-q4.component';
+import { PreQ5Component } from './components/pre-approval/pre-q5/pre-q5.component';
 
 
 @NgModule({
@@ -37,7 +44,14 @@ import { FindBrokersComponent } from './components/find-brokers/find-brokers.com
     LoginComponent,
     MortgageResultsComponent,
     ChatbotComponent,
-    FindBrokersComponent
+    FindBrokersComponent,
+    PreQ1Component,
+    PreQ6Component,
+    PreQ7Component,
+    PreQ2Component,
+    PreQ3Component,
+    PreQ4Component,
+    PreQ5Component
   ],
   imports: [
     BrowserModule,

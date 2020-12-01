@@ -4,6 +4,13 @@ import { FindBrokersComponent } from './components/find-brokers/find-brokers.com
 import { GetStartedPageComponent } from './components/get-started-page/get-started-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { MortgageResultsComponent } from './components/mortgage-results/mortgage-results.component';
+import { PreQ1Component } from './components/pre-approval/pre-q1/pre-q1.component';
+import { PreQ2Component } from './components/pre-approval/pre-q2/pre-q2.component';
+import { PreQ3Component } from './components/pre-approval/pre-q3/pre-q3.component';
+import { PreQ4Component } from './components/pre-approval/pre-q4/pre-q4.component';
+import { PreQ5Component } from './components/pre-approval/pre-q5/pre-q5.component';
+import { PreQ6Component } from './components/pre-approval/pre-q6/pre-q6.component';
+import { PreQ7Component } from './components/pre-approval/pre-q7/pre-q7.component';
 import { Question1Component } from './components/question1/question1.component';
 import { Question2Component } from './components/question2/question2.component';
 import { Question3Component } from './components/question3/question3.component';
@@ -23,7 +30,14 @@ const routes: Routes = [
    { path: 'question5', component: Question5Component },
    { path: 'question6', component: Question6Component },
    { path: 'question7', component: Question7Component },
-   { path: 'find-brokers', component: FindBrokersComponent }
+   { path: 'find-brokers', component: FindBrokersComponent },
+   { path: 'pre-q1', component: PreQ1Component },
+   { path: 'pre-q2', component: PreQ2Component },
+   { path: 'pre-q3', component: PreQ3Component },
+   { path: 'pre-q4', component: PreQ4Component },
+   { path: 'pre-q5', component: PreQ5Component },
+   { path: 'pre-q6', component: PreQ6Component },
+   { path: 'pre-q7', component: PreQ7Component } 
 ];
 
 @NgModule({
