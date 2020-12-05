@@ -28,6 +28,8 @@ import { PreQ2Component } from './components/pre-approval/pre-q2/pre-q2.componen
 import { PreQ3Component } from './components/pre-approval/pre-q3/pre-q3.component';
 import { PreQ4Component } from './components/pre-approval/pre-q4/pre-q4.component';
 import { PreQ5Component } from './components/pre-approval/pre-q5/pre-q5.component';
+import { BrokerDescriptionComponent } from './components/broker-description/broker-description.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -51,7 +53,8 @@ import { PreQ5Component } from './components/pre-approval/pre-q5/pre-q5.componen
     PreQ2Component,
     PreQ3Component,
     PreQ4Component,
-    PreQ5Component
+    PreQ5Component,
+    BrokerDescriptionComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ import { PreQ5Component } from './components/pre-approval/pre-q5/pre-q5.componen
     BrowserModule, 
     FormsModule, 
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],
