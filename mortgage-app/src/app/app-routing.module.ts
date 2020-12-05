@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BrokerDescriptionComponent } from './components/broker-description/broker-description.component';
 import { FindBrokersComponent } from './components/find-brokers/find-brokers.component';
 import { GetStartedPageComponent } from './components/get-started-page/get-started-page.component';
 import { LoginComponent } from './components/login/login.component';
@@ -37,7 +38,8 @@ const routes: Routes = [
    { path: 'pre-q4', component: PreQ4Component },
    { path: 'pre-q5', component: PreQ5Component },
    { path: 'pre-q6', component: PreQ6Component },
-   { path: 'pre-q7', component: PreQ7Component } 
+   { path: 'pre-q7', component: PreQ7Component },
+   { path: 'broker-description', component: BrokerDescriptionComponent},
 ];
 
 @NgModule({

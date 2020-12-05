@@ -1,7 +1,7 @@
 <div id="container-div">
-    <div *ngFor="let broker of brokers">
+    <div *ngFor="let broker of brokers; let i=index">
         <div>
-        <img class="broker-image" src={{broker.img}}  [ngStyle]="{'margin-top.px': broker.top, 'margin-left.px': broker.left}">
+        <img class="broker-image" src={{broker.img}}  [ngStyle]="{'margin-top.px': broker.top, 'margin-left.px': broker.left}" (click)="openBrokerInfo(i)">
         </div>
     </div>
     

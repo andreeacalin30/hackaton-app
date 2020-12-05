@@ -1,0 +1,27 @@
+.center-element {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width:130px;
+}
+
+.space{
+    height: 50px;
+}
+
+#broker-name{
+    font-family: 'Cabin', sans-serif;
+    color: #494C7F;
+    font-size: 2rem;
+}
+
+#broker-company{
+    font-family: 'Cabin', sans-serif;
+}
+
+#rating:focus{
+outline: none;
+}
+
+
+

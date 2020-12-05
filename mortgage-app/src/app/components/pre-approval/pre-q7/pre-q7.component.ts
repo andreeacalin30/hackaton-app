@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pre-q7',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreQ7Component implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  nextPage() {
+    this.router.navigate(['']);
+  }
+
+  backPage() {
+    this.router.navigate(['pre-q6']);
   }
 
 }
