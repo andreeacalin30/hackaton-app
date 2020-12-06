@@ -5,7 +5,7 @@
             "name":"Julia Straka",
             "company":"Straka Mortgage Team",
             "img":"../../../assets/Face1.png",
-            "rating":"3",
+            "rating":"4",
             "about":"10+ years experience in mortgages specializing in working with first time home buyers. Holds multiple certificates of appreciation for my accomplishments and always looking to help new home buyers!",
             "mortgages":[
                 {
@@ -29,7 +29,7 @@
             "name":"John Bayer",
             "company":"Straka Mortgage Team",
             "img":"../../../assets/Face2.png",
-            "rating":"3",
+            "rating":"5",
             "about":"8+ years experience in mortgages specializing in working with first time home buyers. Holds multiple certificates of appreciation for my accomplishments and always looking to help new home buyers!",
             "mortgages":[
                 {
@@ -125,7 +125,7 @@
             "name":"Manny Colstrich",
             "company":"Colstrich Mortgage Team",
             "img":"../../../assets/Face6.png",
-            "rating":"3",
+            "rating":"5",
             "about":"9+ years experience in mortgages specializing in working with first time home buyers. Holds multiple certificates of appreciation for my accomplishments and always looking to help new home buyers!",
             "mortgages":[
                 {
@@ -173,7 +173,7 @@
             "name":"Theodore Merca",
             "company":"Merca Mortgage Team",
             "img":"../../../assets/Face8.png",
-            "rating":"3",
+            "rating":"4",
             "about":"20+ years experience in mortgages specializing in working with first time home buyers. Holds multiple certificates of appreciation for my accomplishments and always looking to help new home buyers!",
             "mortgages":[
                 {
