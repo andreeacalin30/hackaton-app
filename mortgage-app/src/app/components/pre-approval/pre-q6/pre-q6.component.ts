@@ -18,7 +18,7 @@ export class PreQ6Component implements OnInit {
   }
 
   backPage() {
-    this.router.navigate(['pre-q5']);
+    this.router.navigate(['pre-q1']);
   }
 
 }

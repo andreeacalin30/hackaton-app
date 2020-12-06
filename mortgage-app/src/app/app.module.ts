@@ -30,7 +30,7 @@ import { PreQ4Component } from './components/pre-approval/pre-q4/pre-q4.componen
 import { PreQ5Component } from './components/pre-approval/pre-q5/pre-q5.component';
 import { BrokerDescriptionComponent } from './components/broker-description/broker-description.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { SignaturePadModule } from 'angular2-signaturepad';
 
 @NgModule({
   declarations: [
@@ -67,7 +67,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule, 
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    SignaturePadModule
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],

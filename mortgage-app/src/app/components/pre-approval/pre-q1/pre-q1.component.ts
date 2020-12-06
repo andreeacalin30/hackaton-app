@@ -14,11 +14,11 @@ export class PreQ1Component implements OnInit {
   }
 
   nextPage() {
-    this.router.navigate(['pre-q2']);
+    this.router.navigate(['pre-q6']);
   }
 
   backPage() {
-    this.router.navigate(['']);
+    this.router.navigate(['find-brokers']);
   }
 
   value = '0';

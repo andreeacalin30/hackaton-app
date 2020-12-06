@@ -11,7 +11,7 @@ import {NgbRatingConfig} from '@ng-bootstrap/ng-bootstrap';
 export class BrokerDescriptionComponent implements OnInit {
 
   @Input() brokerInfo: any;
-  constructor(private http: HttpClient, private route: ActivatedRoute, config: NgbRatingConfig) { 
+  constructor(private http: HttpClient, private route: ActivatedRoute, config: NgbRatingConfig, private router: Router) { 
     config.max = 5;
   }
   message:any;
@@ -36,6 +36,10 @@ export class BrokerDescriptionComponent implements OnInit {
   
   public getJSON(): Observable<any> {
     return this.http.get("./assets/brokers-data.json");
+  }
+
+  public applyOnline(){
+    this.router.navigate(['pre-q1']);
   }
   
 
