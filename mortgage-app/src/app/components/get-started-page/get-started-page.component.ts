@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-get-started-page',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetStartedPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goToQuestions(){
+    this.router.navigate(['/question1']);
+  }
+
+  goBackToLogin(){
+    this.router.navigate(['/login-page']);
   }
 
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Combined Shape</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5" transform="translate(-74.000000, -357.000000)" fill="#84ADAE">
+            <g id="Group-4" transform="translate(59.000000, 320.000000)">
+                <g id="Group-17" transform="translate(0.000000, 24.000000)">
+                    <g id="24x24/On-Light/Edit" transform="translate(12.000000, 10.000000)">
+                        <path d="M16,9 L16,19.5857864 C16,19.8510029 15.8946432,20.1053568 15.7071068,20.2928932 L12.7071068,23.2928932 C12.3165825,23.6834175 11.6834175,23.6834175 11.2928932,23.2928932 L8.29289322,20.2928932 C8.10535684,20.1053568 8,19.8510029 8,19.5857864 L8,9 L16,9 Z M8,5 C8,2.790861 9.790861,1 12,1 C14.209139,1 16,2.790861 16,5 L16,7 L8,7 L8,5 Z" id="Combined-Shape" transform="translate(12.000000, 12.292893) rotate(45.000000) translate(-12.000000, -12.292893) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

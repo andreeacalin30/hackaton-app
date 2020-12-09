@@ -15,11 +15,11 @@ export class UserService{
     
     constructor(private http: HttpClient){}
 
-    loginUser(userEmail: string, userPassword: string): Observable<UniversalModel>{
+    loginUser(loginDTO: UserLoginDTO): Observable<UniversalModel>{
         return this.http.get<UniversalModel>(this.baseUrl + "/login", {
             params: new HttpParams()
-            .set('userEmail',userEmail)
-            .set('userPassword', userPassword)
+            .set('userEmail',loginDTO.email)
+            .set('userPassword', loginDTO.password)
         });
     }
 

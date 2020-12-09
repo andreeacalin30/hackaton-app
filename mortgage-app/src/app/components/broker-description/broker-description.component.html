@@ -1,0 +1,67 @@
+<div>
+    <div class="space"></div>
+    <div id="photo" >
+        <img class="broker-image center-element" src={{selectedBroker.description?.img}}>
+    </div>
+    <div class="row d-flex" style="margin-top: 3rem; margin-left: 2rem;">
+        <div class="col-sm-6 ">
+            <div id="broker-name">
+                {{selectedBroker.description?.name}}
+            </div>
+            <div id="broker-company">
+                {{selectedBroker.description?.company}}
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div></div>
+        </div>
+    </div>
+    <div  class="row" style="margin-left: 2rem;">
+        <div class="col-sm-12" style="font-size: 2rem; color:#FCCB67; ">
+            <ngb-rating [(rate)]="currentRate"  id="rating"></ngb-rating>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 1rem; margin-left: 2rem;margin-right: 1.4rem;">
+        <div class="col-sm-12" id="description">
+            {{selectedBroker.description?.about}}
+        </div>
+    </div>
+    <div id="results-area">
+        <div id="edit-button">
+            <div >
+            <i class="fas fa-heart"  id="heart-icon"></i>
+            </div>
+        </div>
+        <div id="results-info">
+            Looking for the best mortgage interest rates?
+            With us, lowest mortgage rates in the market are guaranteed.
+        </div>
+        <div id="mortgage-results" style="display: flex;">
+            <div id="square" style="background-color: #FFCEAC;">
+                <div style="height: 6px; width: 6px; background-color: white; float:right; margin-top: 5px; margin-right: 6px; border-radius: 10px;"></div>
+            </div>
+            <div id="subsection-info-div">{{selectedBroker.description.mortgages[0]?.period}}</div>
+            <div id="first-rate">{{selectedBroker.description.mortgages[0]?.percent}}</div>    
+            <div><img id="help-icon" src="../../../assets/help.svg"></div>      
+        </div>
+        <div id="housing-results" style="display: flex;">
+            <div id="square" style="background-color: #FFB6B6;">
+                <div style="height: 6px; width: 6px; background-color: white; float:right; margin-top: 5px; margin-right: 6px; border-radius: 10px;"></div>
+            </div>
+            <div id="subsection-info-div">{{selectedBroker.description.mortgages[1]?.period}}</div>
+            <div id="second-rate">{{selectedBroker.description.mortgages[1]?.percent}}</div>    
+            <div><img id="help-icon" src="../../../assets/help.svg"></div>        
+        </div>
+        <div id="other-costs-results" style="display: flex;">
+            <div id="square" style="background-color: #9DB8E9;">
+                <div style="height: 6px; width: 6px; background-color: white; float:right; margin-top: 5px; margin-right: 6px; border-radius: 10px;"></div>
+            </div>
+            <div id="subsection-info-div">{{selectedBroker.description.mortgages[2]?.period}}</div>
+            <div id="third-rate">{{selectedBroker.description.mortgages[2]?.percent}}</div>   
+            <div><img id="help-icon" src="../../../assets/help.svg"></div>         
+        </div>
+    </div>
+    <div>
+        <button class="center-element big-button" style="margin-top: 30px;" (click)="applyOnline()">Apply Online</button>
+    </div>
+</div>
