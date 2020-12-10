@@ -1,0 +1,22 @@
+[
+    {
+        "id":0,
+        "description":{
+            "name":"Sam Andrews",
+            "company":"HomeWise Real Estate",
+            "img":"../../../assets/sam-andrews-img.png",
+            "rating":"5",
+            "about":"10+ years experience in mortgages specializing in working with first time home buyers. Come buy your dream home with me!"
+        }
+    },
+    {
+        "id":1,
+        "description":{
+            "name":"John Bayer",
+            "company":"Straka Mortgage Team",
+            "img":"../../../assets/Face2.png",
+            "rating":"5",
+            "about":"8+ years experience in mortgages specializing in working with first time home buyers. Come buy your dream home with me!"
+        }
+    }
+]

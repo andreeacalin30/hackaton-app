@@ -1,0 +1,15 @@
+<div id="container-div">
+    <div>
+        <i class="fas fa-filter" id="filter-icon"></i>
+    </div>
+    <div *ngFor="let lawyer of lawyers; let i=index">
+        <div>
+        <img class="lawyer-image" src={{lawyer.img}}  [ngStyle]="{'margin-top.px': lawyer.top, 'margin-left.px': lawyer.left}">
+        </div>
+    </div>
+    <div class="center-element" id="find-lawyers">
+       <div style="opacity: 0.9;"> Real Estate Lawyers close to you</div>
+    </div>
+    
+
+</div>
