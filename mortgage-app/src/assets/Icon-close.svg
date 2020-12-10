@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="9" transform="translate(-384.000000, -384.000000)" fill="#FFFFFF">
+            <g id="Intercom-bubble-chat" transform="translate(366.000000, 366.000000)">
+                <path d="M39.7279224,18 L42.142136,20.4142136 L32.485,30.071 L42.142136,39.7279224 L39.7279224,42.142136 L30.071,32.485 L20.4142136,42.142136 L18,39.7279224 L27.656,30.071 L18,20.4142136 L20.4142136,18 L30.071,27.656 L39.7279224,18 Z" id="Icon"></path>
+            </g>
+        </g>
+    </g>
+</svg>

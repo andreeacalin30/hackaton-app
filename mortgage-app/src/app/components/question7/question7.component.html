@@ -18,13 +18,51 @@
     </div>
    
     <div style="height: 32rem;padding-top: 2rem;">
-        
+        <div class="H3" style="margin-left: 0.9rem; text-align-last: left;">
+            Credit Card
+        </div>
+        <input #box class="question-input">
+        <div class="row" style="display: flex;">
+            <div style="padding-top: 0.5rem;margin-left: 2rem;margin-right: 2rem;">
+                <img src="../../../assets/Icon-Bulb.svg" class="center-element" />
+              </div>
+            <div class="B1" id="first-line-description" style="margin-right: 5rem;  margin-top: 0.5rem; margin-bottom: 1rem;">
+              The average monthly interest owed on outstanding credit card balances. This does not include the balances themselves, 
+              only the interest portion.
+            </div>
+        </div>
+
+        <div class="H3" style="margin-left: 0.9rem; text-align-last: left;">
+            Car Payment
+        </div>
+        <input #box class="question-input" >
+        <div class="row" style="display: flex;">
+            <div style="padding-top: 0.5rem;margin-left: 2rem;margin-right: 2rem;">
+                <img src="../../../assets/Icon-Bulb.svg" class="center-element" />
+              </div>
+            <div class="B1" id="first-line-description" style="margin-right: 5rem; margin-top: 0.5rem; margin-bottom: 1rem;">
+              Your monthly leasing or financing outlay on any household vehicles.
+            </div>
+        </div>
+
+        <div class="H3" style="margin-left: 0.9rem; text-align-last: left;">
+            Other Loan Expenses
+        </div>
+        <input #box class="question-input">
+        <div class="row" style="display: flex;">
+            <div style="padding-top: 0.5rem;margin-left: 2rem;margin-right: 2rem;">
+                <img src="../../../assets/Icon-Bulb.svg" class="center-element" />
+              </div>
+            <div class="B1" id="first-line-description" style="margin-right: 5rem;  margin-top: 0.5rem; margin-bottom: 1rem;">
+              Any other monthly loan expenses, such as linesof credit, student loans, alimony or child support.
+            </div>
+        </div>
     </div>
 
     <div class="space-between-title"></div>
     <div class="space-between-title" style="height: 6rem;"></div>
 
-    <div class="row">
+    <div class="row" style="margin-top:4.1rem;">
       <div>
           <button id="get-started-button" class="center-element" (click)="nextPage()" >Next <img src="../../../assets/Icon-Back Arrow-white.svg" style="margin-bottom: 0.2rem;margin-left: 0.5rem; width: 1.5rem;transform: rotate(180deg);"></button>
       </div>
