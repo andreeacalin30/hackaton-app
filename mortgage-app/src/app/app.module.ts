@@ -31,6 +31,8 @@ import { PreQ5Component } from './components/pre-approval/pre-q5/pre-q5.componen
 import { BrokerDescriptionComponent } from './components/broker-description/broker-description.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SignaturePadModule } from 'angular2-signaturepad';
+import { ContactBrokerComponent } from './components/contact-broker/contact-broker.component';
+import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { SignaturePadModule } from 'angular2-signaturepad';
     PreQ3Component,
     PreQ4Component,
     PreQ5Component,
-    BrokerDescriptionComponent
+    BrokerDescriptionComponent,
+    ContactBrokerComponent,
+    FindLawyersComponent
   ],
   imports: [
     BrowserModule,
