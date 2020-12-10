@@ -5,6 +5,8 @@ import { ContactBrokerComponent } from './components/contact-broker/contact-brok
 import { FindBrokersComponent } from './components/find-brokers/find-brokers.component';
 import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.component';
 import { GetStartedPageComponent } from './components/get-started-page/get-started-page.component';
+import { MapPageMockComponent } from './components/map-page-mock/map-page-mock.component';
+import { MapPageComponent } from './components/map-page/map-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { MortgageResultsComponent } from './components/mortgage-results/mortgage-results.component';
 import { PreQ1Component } from './components/pre-approval/pre-q1/pre-q1.component';
@@ -33,6 +35,8 @@ const routes: Routes = [
    { path: 'question5', component: Question5Component },
    { path: 'question6', component: Question6Component },
    { path: 'question7', component: Question7Component },
+   { path: 'map-page', component: MapPageComponent },
+   { path: 'map-page-mock', component: MapPageMockComponent }
    { path: 'find-brokers', component: FindBrokersComponent },
    { path: 'pre-q1', component: PreQ1Component },
    { path: 'pre-q2', component: PreQ2Component },
@@ -44,7 +48,6 @@ const routes: Routes = [
    { path: 'broker-description', component: BrokerDescriptionComponent},
    { path: 'contact-broker', component: ContactBrokerComponent},
    { path: 'find-lawyers', component: FindLawyersComponent}
-
 ];
 
 @NgModule({

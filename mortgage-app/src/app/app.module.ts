@@ -14,6 +14,8 @@ import { Question4Component } from './components/question4/question4.component';
 import { Question5Component } from './components/question5/question5.component';
 import { Question6Component } from './components/question6/question6.component';
 import { Question7Component } from './components/question7/question7.component';
+import { MapPageComponent } from './components/map-page/map-page.component';
+import { MapPageMockComponent } from './components/map-page-mock/map-page-mock.component';
 import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
@@ -45,6 +47,8 @@ import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.com
     Question5Component,
     Question6Component,
     Question7Component,
+    MapPageComponent,
+    MapPageMockComponent
     LoginComponent,
     MortgageResultsComponent,
     ChatbotComponent,
