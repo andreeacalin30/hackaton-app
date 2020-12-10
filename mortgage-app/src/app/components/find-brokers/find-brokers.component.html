@@ -1,0 +1,15 @@
+<div id="container-div">
+    <div>
+        <i class="fas fa-filter" id="filter-icon"></i>
+    </div>
+    <div *ngFor="let broker of brokers; let i=index">
+        <div>
+        <img class="broker-image" src={{broker.img}}  [ngStyle]="{'margin-top.px': broker.top, 'margin-left.px': broker.left}" (click)="openBrokerInfo(i)">
+        </div>
+    </div>
+    <div class="center-element" id="find-brokers">
+       <div style="opacity: 0.9;"> Mortgage brokers close to you</div>
+    </div>
+    
+
+</div>

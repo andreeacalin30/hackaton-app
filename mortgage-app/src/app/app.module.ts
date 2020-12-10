@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
-
+import {MatFormFieldModule} from '@angular/material/form-field'
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GetStartedPageComponent } from './components/get-started-page/get-started-page.component';
@@ -15,6 +16,25 @@ import { Question6Component } from './components/question6/question6.component';
 import { Question7Component } from './components/question7/question7.component';
 import { MapPageComponent } from './components/map-page/map-page.component';
 import { MapPageMockComponent } from './components/map-page-mock/map-page-mock.component';
+import { LoginComponent } from './components/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MortgageResultsComponent } from './components/mortgage-results/mortgage-results.component';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
+import { FindBrokersComponent } from './components/find-brokers/find-brokers.component';
+import { PreQ1Component } from './components/pre-approval/pre-q1/pre-q1.component';
+import { PreQ6Component } from './components/pre-approval/pre-q6/pre-q6.component';
+import { PreQ7Component } from './components/pre-approval/pre-q7/pre-q7.component';
+import { PreQ2Component } from './components/pre-approval/pre-q2/pre-q2.component';
+import { PreQ3Component } from './components/pre-approval/pre-q3/pre-q3.component';
+import { PreQ4Component } from './components/pre-approval/pre-q4/pre-q4.component';
+import { PreQ5Component } from './components/pre-approval/pre-q5/pre-q5.component';
+import { BrokerDescriptionComponent } from './components/broker-description/broker-description.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SignaturePadModule } from 'angular2-signaturepad';
+import { ContactBrokerComponent } from './components/contact-broker/contact-broker.component';
+import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +49,34 @@ import { MapPageMockComponent } from './components/map-page-mock/map-page-mock.c
     Question7Component,
     MapPageComponent,
     MapPageMockComponent
+    LoginComponent,
+    MortgageResultsComponent,
+    ChatbotComponent,
+    FindBrokersComponent,
+    PreQ1Component,
+    PreQ6Component,
+    PreQ7Component,
+    PreQ2Component,
+    PreQ3Component,
+    PreQ4Component,
+    PreQ5Component,
+    BrokerDescriptionComponent,
+    ContactBrokerComponent,
+    FindLawyersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatSliderModule
+    MatSliderModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    BrowserModule, 
+    FormsModule, 
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgbModule,
+    SignaturePadModule
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],

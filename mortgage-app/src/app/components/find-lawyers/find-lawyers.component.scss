@@ -1,0 +1,46 @@
+#container-div{
+    min-width: 375px;
+    min-height: 812px;
+    background-image: url("../../../assets/map_brokers.JPG") ;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+}
+
+.lawyer-image{
+    width: 60px;
+    position: relative;
+    z-index: 0;
+}
+
+.center-element{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+    text-align: center;
+}
+
+#filter-icon{
+    float:right;
+    margin-right: 15px;
+    margin-top: 2rem;
+    font-size: 2rem;
+    color:#709394;
+}
+
+#find-lawyers{
+    width:220px;
+    height: 50px;
+    background-color:#494C7F;
+    color: white;
+    border-radius: 13px;
+    z-index: 1;
+    padding-top: 10px;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 100;
+    position: fixed;
+    bottom: 0;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
