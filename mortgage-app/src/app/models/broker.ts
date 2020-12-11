@@ -5,12 +5,12 @@ export class Broker{
     id: string;
     description: BrokerDescription;
     brokerType: string;
-    fk_propertyId: string
+    fkPropertyId: string
 
-    constructor(id: string, description: BrokerDescription, brokerType: string, fk_propertyId: string){
+    constructor(id: string, description: BrokerDescription, brokerType: string, fkPropertyId: string){
         this.id = id;
         this.description = description;
         this.brokerType = brokerType;
-        this.fk_propertyId = fk_propertyId;
+        this.fkPropertyId = fkPropertyId;
     }
 }

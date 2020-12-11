@@ -32,4 +32,11 @@ export class BrokerService{
         return this.http.get<Broker[]>(this.baseUrl + "/brokers");
     }
 
+    getRealEstateBroker(propertyId: string): Observable<Broker>{
+        return this.http.get<Broker>(this.baseUrl + "/broker/real-estate", {
+            params: new HttpParams()
+            .set('propertyId',propertyId)
+        });
+    }
+
 }
