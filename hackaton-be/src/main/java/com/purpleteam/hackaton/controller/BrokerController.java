@@ -45,15 +45,15 @@ public class BrokerController {
 	}
 	
 	@GetMapping("/broker")
-	public ResponseEntity<Broker> getBroker(@RequestParam final String id){
+	public ResponseEntity<Broker> getBroker(@RequestParam("id") final String id){
 		Broker brokerFromDB = brokerService.getBroker(id);
 		
 		return new ResponseEntity<Broker>(brokerFromDB, HttpStatus.OK);
 	}
 	
 	@GetMapping("/broker/real-estate")
-	public ResponseEntity<Broker> getRealEstateBroker(@RequestParam final String id){
-		Broker realEstateBrokerFromDB = brokerService.getRealEstateBroker(id);
+	public ResponseEntity<Broker> getRealEstateBroker(@RequestParam("propertyId") final String propertyId){
+		Broker realEstateBrokerFromDB = brokerService.getRealEstateBroker(propertyId);
 		
 		return new ResponseEntity<Broker>(realEstateBrokerFromDB, HttpStatus.OK);
 	}

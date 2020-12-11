@@ -10,7 +10,7 @@ public class Broker {
 	private String id;
 	private String brokerType;
 	private BrokerDescription description;
-	private String fk_propertyId;
+	private String fkPropertyId;
 
 	public String getId() {
 		return id;
@@ -36,20 +36,20 @@ public class Broker {
 		this.brokerType = brokerType;
 	}
 
-	public String getFk_propertyId() {
-		return fk_propertyId;
+	public String getFkPropertyId() {
+		return fkPropertyId;
 	}
 
-	public void setFk_propertyId(String fk_propertyId) {
-		this.fk_propertyId = fk_propertyId;
+	public void setFkPropertyId(String fkPropertyId) {
+		this.fkPropertyId = fkPropertyId;
 	}
 
-	public Broker(String id, String brokerType, BrokerDescription description, String fk_propertyId) {
+	public Broker(String id, String brokerType, BrokerDescription description, String fkPropertyId) {
 		super();
 		this.id = id;
 		this.brokerType = brokerType;
 		this.description = description;
-		this.fk_propertyId = fk_propertyId;
+		this.fkPropertyId = fkPropertyId;
 	}
 
 }

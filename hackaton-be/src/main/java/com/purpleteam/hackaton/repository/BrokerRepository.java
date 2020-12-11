@@ -13,10 +13,12 @@ import com.purpleteam.hackaton.model.Broker;
 @Repository
 public interface BrokerRepository extends MongoRepository<Broker, String>{
 	
-	Optional<Broker> findByIdAndBrokerType(final String id, final String brokerType);
+	Optional<Broker> findByFkPropertyIdAndBrokerType(final String id, final String brokerType);
 	
 	Optional<Broker> findByDescription_Name(final String name);
 	
 	List<Broker> findByBrokerType(final String brokerType);
+
+	Optional<Broker> findByIdAndBrokerType(String id, String fullName);
 
 }

@@ -66,11 +66,11 @@ public class BrokerServiceImpl implements BrokerService{
 	}
 	
 	@Override
-	public Broker getRealEstateBroker(String id) {
-		Optional<Broker> realEstateBrokerFromDB = brokerRepository.findByIdAndBrokerType(id, BrokerType.REALESTATE.fullName());
+	public Broker getRealEstateBroker(String propertyId) {
+		Optional<Broker> realEstateBrokerFromDB = brokerRepository.findByFkPropertyIdAndBrokerType(propertyId, BrokerType.REALESTATE.fullName());
 		
 		if(!realEstateBrokerFromDB.isPresent()) {
-			throw new AppException("Real Estate Broker Broker with that id does not exist in the DB", HttpStatus.BAD_REQUEST);
+			throw new AppException("Real Estate Broker Broker for that property does not exist in the DB", HttpStatus.BAD_REQUEST);
 		}
 		
 		return realEstateBrokerFromDB.get();
