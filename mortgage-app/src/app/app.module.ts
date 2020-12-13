@@ -16,9 +16,7 @@ import { Question6Component } from './components/question6/question6.component';
 import { Question7Component } from './components/question7/question7.component';
 import { MapPageComponent } from './components/map-page/map-page.component';
 import { MapPageMockComponent } from './components/map-page-mock/map-page-mock.component';
-<<<<<<< HEAD
 import { ChartsModule } from 'ng2-charts';
-=======
 import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
@@ -34,11 +32,10 @@ import { PreQ3Component } from './components/pre-approval/pre-q3/pre-q3.componen
 import { PreQ4Component } from './components/pre-approval/pre-q4/pre-q4.component';
 import { PreQ5Component } from './components/pre-approval/pre-q5/pre-q5.component';
 import { BrokerDescriptionComponent } from './components/broker-description/broker-description.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SignaturePadModule } from 'angular2-signaturepad';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { SignaturePadModule } from 'angular2-signaturepad';
 import { ContactBrokerComponent } from './components/contact-broker/contact-broker.component';
 import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.component';
->>>>>>> 295162f09c36c9098a14632e317f69a44948af9e
 
 @NgModule({
   declarations: [
@@ -52,7 +49,7 @@ import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.com
     Question6Component,
     Question7Component,
     MapPageComponent,
-    MapPageMockComponent
+    MapPageMockComponent,
     LoginComponent,
     MortgageResultsComponent,
     ChatbotComponent,
@@ -72,9 +69,7 @@ import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.com
     BrowserModule,
     AppRoutingModule,
     MatSliderModule,
-<<<<<<< HEAD
-    ChartsModule
-=======
+    ChartsModule,
     MatFormFieldModule,
     MatInputModule,
     BrowserAnimationsModule,
@@ -82,9 +77,8 @@ import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.com
     FormsModule, 
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule,
-    SignaturePadModule
->>>>>>> 295162f09c36c9098a14632e317f69a44948af9e
+    // NgbModule,
+    // SignaturePadModule
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],
