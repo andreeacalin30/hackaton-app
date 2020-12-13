@@ -1,0 +1,74 @@
+[
+    {
+        "id":6,
+        "description":{
+            "name":"Manny Colstrich",
+            "company":"Colstrich Mortgage Team",
+            "img":"../../../assets/Face6.png",
+            "rating":"5",
+            "about":"9+ years experience in mortgages specializing in working with first time home buyers. Holds multiple certificates of appreciation for my accomplishments and always looking to help new home buyers!",
+            "mortgages":[
+                {
+                    "period":"1 Year Fixed",
+                    "percent":"2.09%"
+                },
+                {
+                    "period":"3 Year Fixed",
+                    "percent":"1.69%"
+                },
+                {
+                    "period":"5 Year Variable",
+                    "percent":"1.45%"
+                }
+            ]
+        }
+    },
+    {
+        "id":7,
+        "description":{
+            "name":"Theodore Merca",
+            "company":"Merca Lawyer Team",
+            "img":"../../../assets/Face8.png",
+            "rating":"4",
+            "about":"20+ years experience in mortgages specializing in working with first time home buyers. Holds multiple certificates of appreciation for my accomplishments and always looking to help new home buyers!",
+            "mortgages":[
+                {
+                    "period":"1 Year Fixed",
+                    "percent":"2.09%"
+                },
+                {
+                    "period":"3 Year Fixed",
+                    "percent":"1.69%"
+                },
+                {
+                    "period":"5 Year Variable",
+                    "percent":"1.45%"
+                }
+            ]
+        }
+    },
+    {
+        "id":8,
+        "description":{
+            "name":"Amanda Mitchell",
+            "company":"Mitchell Lawyer Team",
+            "img":"../../../assets/Face9.png",
+            "rating":"3",
+            "about":"3+ years experience in mortgages specializing in working with first time home buyers. Holds multiple certificates of appreciation for my accomplishments and always looking to help new home buyers!",
+            "mortgages":[
+                {
+                    "period":"1 Year Fixed",
+                    "percent":"2.09%"
+                },
+                {
+                    "period":"3 Year Fixed",
+                    "percent":"1.69%"
+                },
+                {
+                    "period":"5 Year Variable",
+                    "percent":"1.45%"
+                }
+            ]
+        }
+    }
+]

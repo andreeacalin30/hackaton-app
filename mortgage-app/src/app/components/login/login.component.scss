@@ -1,0 +1,114 @@
+.space-between-title{
+    height: 50px;
+}
+
+.space{
+    height: 100px;
+}
+
+.container{
+    overflow: hidden;
+}
+
+#login-title{
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Cabin', sans-serif;
+  font-size: 36px;
+  color: #494c7f;
+  letter-spacing: -0.56px;
+  line-height: 40px;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.center-element {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width:320px;
+}
+
+.small-space{
+    height: 2rem;
+}
+
+.center-input{
+    text-align:center
+}
+
+input{
+    margin:auto;
+    min-width: 300px;
+    max-width: 330px;
+    height: 38px;
+    background-color: #FBEFF1;
+    outline: none;
+    border: #FBEFF1;
+    padding-left: 1rem;
+}
+.row{
+    min-width: 350px;   
+}
+
+#forgot-pass-div{
+    font-family: 'Cabin', sans-serif;
+    text-align: right;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    position: inherit;
+}
+
+.login-space{
+    margin-top: 6rem;
+}
+
+#login-btn{
+    font-family: 'Cabin', sans-serif;
+    border: none;
+    background-color: #84adae;
+    color: white;
+    border-radius: 18px;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#login-btn:focus{
+    outline: none;
+    -moz-box-shadow: 0px 0px 4px 1px grey;
+    -webkit-box-shadow: 0px 0px 4px 1px grey;
+    box-shadow: 0px 0px 4px 2px grey;
+}
+
+.new-user-div{
+    display: flex;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+#sign-up{
+    font-family: 'Cabin', sans-serif;
+    margin-left: 0.7rem;;
+}
+
+#new-user{
+    font-family: 'Cabin', sans-serif;
+    opacity: 0.7;
+}
+
+.invalid-login-class{
+    border: 1px solid red;
+    border-radius: 8px;
+}
+
+.invalid-credentials-class{
+    color: red;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    display:block;
+}
+ .invalid-credentials-hidden{
+    display:none;
+ }

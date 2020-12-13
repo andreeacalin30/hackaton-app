@@ -1,12 +1,13 @@
 package com.purpleteam.hackaton.model;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.purpleteam.hackaton.constants.OwnershipType;
 import com.purpleteam.hackaton.constants.PropertyType;
-import com.purpleteam.hackaton.constants.Provinces;
 
-// TODO : INCOMPLETE FORM!!
 @Document(collection = "users")
 public class User {
 
@@ -21,23 +22,35 @@ public class User {
 
 	private String password;
 
+	private Boolean hasFinishedQuestioneer;
+
 	private String phoneNumber;
 
 	private Double annualIncome;
 
+	private Double downPayment;
+
+	private DebtPayments debtPayments;
+
+	private OtherExpenses otherExpenses;
+
+	private Double estimatedRemainingCash;
+
+	private Double otherHousingCosts;
+
 	private PropertyType propertyType;
 
-	private Integer nrOfBaths;
+	private String nrOfBaths;
 
-	private Provinces desiredProvince;
+	private String nrOfRooms;
 
-	private String desiredCity;
+	private OwnershipType desiredOwnershipType;
 
-	private String desiredStreet;
+	private List<String> desiredAddresses;
 
-	private String desiredStreetNumber;
+	private Double generatedMaximumAffordability;
 
-	private String postalCodel;
+	private Double mortgagePayment;
 
 	public String getId() {
 		return id;
@@ -103,72 +116,129 @@ public class User {
 		this.propertyType = propertyType;
 	}
 
-	public Integer getNrOfBaths() {
+	public Boolean getHasFinishedQuestioneer() {
+		return hasFinishedQuestioneer;
+	}
+
+	public void setHasFinishedQuestioneer(Boolean hasFinishedQuestioneer) {
+		this.hasFinishedQuestioneer = hasFinishedQuestioneer;
+	}
+
+	public String getNrOfBaths() {
 		return nrOfBaths;
 	}
 
-	public void setNrOfBaths(Integer nrOfBaths) {
+	public void setNrOfBaths(String nrOfBaths) {
 		this.nrOfBaths = nrOfBaths;
 	}
 
-	public Provinces getDesiredProvince() {
-		return desiredProvince;
+	public String getNrOfRooms() {
+		return nrOfRooms;
 	}
 
-	public void setDesiredProvince(Provinces desiredProvince) {
-		this.desiredProvince = desiredProvince;
+	public void setNrOfRooms(String nrOfRooms) {
+		this.nrOfRooms = nrOfRooms;
 	}
 
-	public String getDesiredCity() {
-		return desiredCity;
+	public OwnershipType getDesiredOwnershipType() {
+		return desiredOwnershipType;
 	}
 
-	public void setDesiredCity(String desiredCity) {
-		this.desiredCity = desiredCity;
+	public void setDesiredOwnershipType(OwnershipType desiredOwnershipType) {
+		this.desiredOwnershipType = desiredOwnershipType;
 	}
 
-	public String getDesiredStreet() {
-		return desiredStreet;
+	public List<String> getDesiredAddresses() {
+		return desiredAddresses;
 	}
 
-	public void setDesiredStreet(String desiredStreet) {
-		this.desiredStreet = desiredStreet;
+	public void setDesiredAddresses(List<String> desiredAddresses) {
+		this.desiredAddresses = desiredAddresses;
 	}
 
-	public String getDesiredStreetNumber() {
-		return desiredStreetNumber;
+	public Double getGeneratedMaximumAffordability() {
+		return generatedMaximumAffordability;
 	}
 
-	public void setDesiredStreetNumber(String desiredStreetNumber) {
-		this.desiredStreetNumber = desiredStreetNumber;
+	public void setGeneratedMaximumAffordability(Double generatedMaximumAffordability) {
+		this.generatedMaximumAffordability = generatedMaximumAffordability;
 	}
 
-	public String getPostalCodel() {
-		return postalCodel;
+	public Double getMortgagePayment() {
+		return mortgagePayment;
 	}
 
-	public void setPostalCodel(String postalCodel) {
-		this.postalCodel = postalCodel;
+	public void setMortgagePayment(Double mortgagePayment) {
+		this.mortgagePayment = mortgagePayment;
 	}
 
-	public User(String id, String firstName, String lastName, String email, String password, String phoneNumber,
-			Double annualIncome, PropertyType propertyType, Integer nrOfBaths, Provinces desiredProvince,
-			String desiredCity, String desiredStreet, String desiredStreetNumber, String postalCodel) {
+	public Double getDownPayment() {
+		return downPayment;
+	}
+
+	public void setDownPayment(Double downPayment) {
+		this.downPayment = downPayment;
+	}
+
+	public DebtPayments getDebtPayments() {
+		return debtPayments;
+	}
+
+	public void setDebtPayments(DebtPayments debtPayments) {
+		this.debtPayments = debtPayments;
+	}
+
+	public OtherExpenses getOtherExpenses() {
+		return otherExpenses;
+	}
+
+	public void setOtherExpenses(OtherExpenses otherExpenses) {
+		this.otherExpenses = otherExpenses;
+	}
+
+	public Double getEstimatedRemainingCash() {
+		return estimatedRemainingCash;
+	}
+
+	public void setEstimatedRemainingCash(Double estimatedRemainingCash) {
+		this.estimatedRemainingCash = estimatedRemainingCash;
+	}
+
+	public Double getOtherHousingCosts() {
+		return otherHousingCosts;
+	}
+
+	public void setOtherHousingCosts(Double otherHousingCosts) {
+		this.otherHousingCosts = otherHousingCosts;
+	}
+
+	public User(String id, String firstName, String lastName, String email, String password,
+			Boolean hasFinishedQuestioneer, String phoneNumber, Double annualIncome, Double downPayment,
+			DebtPayments debtPayments, OtherExpenses otherExpenses, Double estimatedRemainingCash,
+			Double otherHousingCosts, PropertyType propertyType, String nrOfBaths, String nrOfRooms,
+			OwnershipType desiredOwnershipType, List<String> desiredAddresses, Double generatedMaximumAffordability,
+			Double mortgagePayment) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
+		this.hasFinishedQuestioneer = hasFinishedQuestioneer;
 		this.phoneNumber = phoneNumber;
 		this.annualIncome = annualIncome;
+		this.downPayment = downPayment;
+		this.debtPayments = debtPayments;
+		this.otherExpenses = otherExpenses;
+		this.estimatedRemainingCash = estimatedRemainingCash;
+		this.otherHousingCosts = otherHousingCosts;
 		this.propertyType = propertyType;
 		this.nrOfBaths = nrOfBaths;
-		this.desiredProvince = desiredProvince;
-		this.desiredCity = desiredCity;
-		this.desiredStreet = desiredStreet;
-		this.desiredStreetNumber = desiredStreetNumber;
-		this.postalCodel = postalCodel;
+		this.nrOfRooms = nrOfRooms;
+		this.desiredOwnershipType = desiredOwnershipType;
+		this.desiredAddresses = desiredAddresses;
+		this.generatedMaximumAffordability = generatedMaximumAffordability;
+		this.mortgagePayment = mortgagePayment;
 	}
 
 }

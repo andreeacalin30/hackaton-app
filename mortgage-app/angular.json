@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mortgage-app"
+    }
+  },
+  "defaultProject": "mortgage-app",
+  "cli": {
+    "analytics": false
+  }
 }
