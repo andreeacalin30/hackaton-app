@@ -15,6 +15,7 @@ import { Question6Component } from './components/question6/question6.component';
 import { Question7Component } from './components/question7/question7.component';
 import { MapPageComponent } from './components/map-page/map-page.component';
 import { MapPageMockComponent } from './components/map-page-mock/map-page-mock.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MapPageMockComponent } from './components/map-page-mock/map-page-mock.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatSliderModule
+    MatSliderModule,
+    ChartsModule
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],
