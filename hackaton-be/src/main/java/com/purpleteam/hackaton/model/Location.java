@@ -1,24 +1,18 @@
 package com.purpleteam.hackaton.model;
 
-import com.purpleteam.hackaton.constants.Provinces;
-
 public class Location {
 
-	private Provinces province;
+	private String province;
 
 	private String city;
 
 	private String street;
 
-	private String postalLdu;
-
-	private String postalFsa;
-
-	public Provinces getProvince() {
+	public String getProvince() {
 		return province;
 	}
 
-	public void setProvince(Provinces province) {
+	public void setProvince(String province) {
 		this.province = province;
 	}
 
@@ -38,29 +32,11 @@ public class Location {
 		this.street = street;
 	}
 
-	public String getPostalLdu() {
-		return postalLdu;
-	}
-
-	public void setPostalLdu(String postalLdu) {
-		this.postalLdu = postalLdu;
-	}
-
-	public String getPostalFsa() {
-		return postalFsa;
-	}
-
-	public void setPostalFsa(String postalFsa) {
-		this.postalFsa = postalFsa;
-	}
-
-	public Location(Provinces province, String city, String street, String postalLdu, String postalFsa) {
+	public Location(String province, String city, String street) {
 		super();
 		this.province = province;
 		this.city = city;
 		this.street = street;
-		this.postalLdu = postalLdu;
-		this.postalFsa = postalFsa;
 	}
 
 }

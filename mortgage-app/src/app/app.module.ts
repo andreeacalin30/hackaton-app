@@ -36,7 +36,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SignaturePadModule } from 'angular2-signaturepad';
 import { ContactBrokerComponent } from './components/contact-broker/contact-broker.component';
 import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.component';
-
+import { InfoPointComponent } from './components/info-point/info-point.component';
+import { NgImageSliderModule } from "ng-image-slider";
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +64,8 @@ import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.com
     PreQ5Component,
     BrokerDescriptionComponent,
     ContactBrokerComponent,
-    FindLawyersComponent
+    FindLawyersComponent,
+    InfoPointComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +80,8 @@ import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.com
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    SignaturePadModule
+    SignaturePadModule,
+    NgImageSliderModule
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],

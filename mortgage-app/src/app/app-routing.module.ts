@@ -23,6 +23,7 @@ import { Question4Component } from './components/question4/question4.component';
 import { Question5Component } from './components/question5/question5.component';
 import { Question6Component } from './components/question6/question6.component';
 import { Question7Component } from './components/question7/question7.component';
+import { InfoPointComponent } from './components/info-point/info-point.component';
 
 const routes: Routes = [
    { path: 'welcome-page', component: GetStartedPageComponent },
@@ -47,7 +48,9 @@ const routes: Routes = [
    { path: 'pre-q7', component: PreQ7Component },
    { path: 'broker-description', component: BrokerDescriptionComponent},
    { path: 'contact-broker', component: ContactBrokerComponent},
-   { path: 'find-lawyers', component: FindLawyersComponent}
+   { path: 'find-lawyers', component: FindLawyersComponent},
+   { path: 'info-point', component: InfoPointComponent}
+  
 ];
 
 @NgModule({
