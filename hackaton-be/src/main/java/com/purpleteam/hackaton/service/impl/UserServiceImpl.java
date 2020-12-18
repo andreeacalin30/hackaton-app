@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.purpleteam.hackaton.constants.PropertyType;
 import com.purpleteam.hackaton.exception.AppException;
+import com.purpleteam.hackaton.model.OtherExpenses;
 import com.purpleteam.hackaton.model.User;
 import com.purpleteam.hackaton.repository.UserRepository;
 import com.purpleteam.hackaton.service.UserService;
@@ -113,6 +114,7 @@ public class UserServiceImpl implements UserService {
 			totalMonthlyDebts += user.getDebtPayments().getOtherLoanExpenses() == null ? 0 : user.getDebtPayments().getOtherLoanExpenses();
 			
 			Double totalMonthlyDebtLoad = monthlyHousingCosts + totalMonthlyDebts;
+			user.setOtherHousingCosts(monthlyHousingCosts);
 
 			if (totalMonthlyDebtLoad < 0.4 * user.getAnnualIncome()) {
 				isEligibbleForMortgage = true;
@@ -125,23 +127,25 @@ public class UserServiceImpl implements UserService {
 
 		// maximum affordability is calculated based on annual income and multiplied by
 		// 4 years
-		maximumAffordability = user.getAnnualIncome() * 4 * 12;
+		maximumAffordability = user.getAnnualIncome() * 4;
 
 		return maximumAffordability;
 	}
 
 	private void populateOtherExpensesNoValuesAreGiven(User user) {
-		if (user.getOtherExpenses().getPropertyTax() == null) {
-			// We took the average housing cost for torronto
+		if(user.getOtherExpenses() == null) {
+			user.setOtherExpenses(new OtherExpenses());
+		}
+		if (user.getOtherExpenses() == null || user.getOtherExpenses().getPropertyTax() == null) {
+			// We took the average housing cost for torronto				
 			user.getOtherExpenses().setPropertyTax(Double.valueOf(Integer.valueOf(2999))/12);
 		}
-		if(user.getPropertyType().equals(PropertyType.CONDO) && user.getOtherExpenses().getCondoFees() == null) {
+		if(user.getOtherExpenses() == null || user.getPropertyType().equals(PropertyType.CONDO) && user.getOtherExpenses().getCondoFees() == null) {
 			user.getOtherExpenses().setCondoFees(Double.valueOf(Integer.valueOf(250)));
 		}
-		if(user.getOtherExpenses().getHeatingCosts() == null) {
+		if(user.getOtherExpenses() == null || user.getOtherExpenses().getHeatingCosts() == null) {
 			user.getOtherExpenses().setHeatingCosts(Double.valueOf(Integer.valueOf(45)));
 		}
-
 	}
 
 	private Double calculateMonthlyMortgagePayent(Double maximumAffordability) {
