@@ -37,14 +37,17 @@
             <p id="op11" style="margin-left: 4.3rem;margin-top: 1rem;font-family: Avenir-Book;font-size: 16px;color: #595959;">New</p>
         </div>
         <div id="op2" class="question-box" (click)="checkBox('resale')" style="display: block;">
-            <img [src]="getHouseImage2()" class="center-element" style="margin-top: 1.3rem;"/>
+            <img [src]="getHouseImage2()" class="center-element" style="margin-top: 2.2rem; width: 6rem;"/>
             <p id="op22" style="margin-left: 4.3rem;margin-top: 1rem;font-family: Avenir-Book;font-size: 16px;color: #595959;">Resale</p>
         </div>
     </div>
     <div class="row" style="display: flex;align-items: flex-end;place-content: center;    margin-left: -3rem;">
         <div id="op3" class="question-box" (click)="checkBox('both')" style="display: block;">
-            <img [src]="getHouseImage3()" class="center-element" style="margin-top: 1.3rem;"/>
-            <p id="op33" style="margin-left: 4.3rem;margin-top: 1rem;font-family: Avenir-Book;font-size: 16px;color: #595959;">Both</p>
+            <div style="display: inline-flex; margin-top: 13px; margin-left: 19px;">
+                <img [src]="getHouseImage3()" class="center-element" style="margin-top: 1.3rem; width: 4rem;"/>
+                <img [src]="getHouseImage4()" class="center-element" style="padding-top: 2.8rem; width: 4rem;margin-left: 5px;"/>
+            </div>
+            <p id="op33" style="margin-left: 4.3rem;margin-top: 0.5rem;font-family: Avenir-Book;font-size: 16px;color: #595959;">Both</p>
         </div>
     
     </div>

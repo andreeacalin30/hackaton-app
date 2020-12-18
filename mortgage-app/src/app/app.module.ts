@@ -16,6 +16,7 @@ import { Question6Component } from './components/question6/question6.component';
 import { Question7Component } from './components/question7/question7.component';
 import { MapPageComponent } from './components/map-page/map-page.component';
 import { MapPageMockComponent } from './components/map-page-mock/map-page-mock.component';
+import { ChartsModule } from 'ng2-charts';
 import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
@@ -70,6 +71,7 @@ import { NgImageSliderModule } from "ng-image-slider";
     BrowserModule,
     AppRoutingModule,
     MatSliderModule,
+    ChartsModule,
     MatFormFieldModule,
     MatInputModule,
     BrowserAnimationsModule,
