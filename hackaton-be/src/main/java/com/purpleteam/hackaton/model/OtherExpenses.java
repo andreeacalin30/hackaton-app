@@ -39,7 +39,4 @@ public class OtherExpenses {
 		this.heatingCosts = heatingCosts;
 	}
 
-	public OtherExpenses() {
-		super();
-	}
 }
