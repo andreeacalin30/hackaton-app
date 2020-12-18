@@ -36,7 +36,7 @@ const routes: Routes = [
    { path: 'question6', component: Question6Component },
    { path: 'question7', component: Question7Component },
    { path: 'map-page', component: MapPageComponent },
-   { path: 'map-page-mock', component: MapPageMockComponent }
+   { path: 'map-page-mock', component: MapPageMockComponent },
    { path: 'find-brokers', component: FindBrokersComponent },
    { path: 'pre-q1', component: PreQ1Component },
    { path: 'pre-q2', component: PreQ2Component },

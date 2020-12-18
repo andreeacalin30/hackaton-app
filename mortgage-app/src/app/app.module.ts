@@ -32,8 +32,8 @@ import { PreQ3Component } from './components/pre-approval/pre-q3/pre-q3.componen
 import { PreQ4Component } from './components/pre-approval/pre-q4/pre-q4.component';
 import { PreQ5Component } from './components/pre-approval/pre-q5/pre-q5.component';
 import { BrokerDescriptionComponent } from './components/broker-description/broker-description.component';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-// import { SignaturePadModule } from 'angular2-signaturepad';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SignaturePadModule } from 'angular2-signaturepad';
 import { ContactBrokerComponent } from './components/contact-broker/contact-broker.component';
 import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.component';
 
@@ -77,8 +77,8 @@ import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.com
     FormsModule, 
     ReactiveFormsModule,
     HttpClientModule,
-    // NgbModule,
-    // SignaturePadModule
+    NgbModule,
+    SignaturePadModule
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],
