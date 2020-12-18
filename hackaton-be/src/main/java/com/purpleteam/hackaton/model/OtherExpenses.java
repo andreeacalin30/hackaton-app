@@ -38,5 +38,9 @@ public class OtherExpenses {
 		this.condoFees = condoFees;
 		this.heatingCosts = heatingCosts;
 	}
+	
+	public OtherExpenses() {
+		super();
+	}
 
 }
