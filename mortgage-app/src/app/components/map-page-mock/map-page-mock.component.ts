@@ -16,7 +16,6 @@ export class MapPageMockComponent implements OnInit {
   openHouse() {
     document.getElementById("bakgroundOpac").style.display = "flex";
     document.getElementById("house").style.display = "block";
-    console.log("HOUSE OPENED")
   }
 
   closeHouse() {

@@ -23,13 +23,13 @@ export class Question4Component implements OnInit {
   }
 
   houseImage1 = '../../../assets/Icon-House.svg';
-  getHouseImage1() { console.log(this.houseImage1); return this.houseImage1; }
+  getHouseImage1() { return this.houseImage1; }
 
   houseImage2 = '../../../assets/Icon-House.svg';
-  getHouseImage2() { console.log(this.houseImage2); return this.houseImage2; }
+  getHouseImage2() { return this.houseImage2; }
 
   houseImage3 = '../../../assets/Icon-House.svg';
-  getHouseImage3() { console.log(this.houseImage3); return this.houseImage3; }
+  getHouseImage3() { return this.houseImage3; }
 
 
   element1: HTMLElement;
@@ -85,68 +85,5 @@ export class Question4Component implements OnInit {
       this.element33.style.color = '#ffffff';
 
     }
-    console.log(type);
   }
-
-  // public checkBox(type: string) {
-  //   this.element1 = document.getElementById('room1') as HTMLElement;
-  //   this.element2 = document.getElementById('room2') as HTMLElement;
-  //   this.element3 = document.getElementById('room3') as HTMLElement;
-  //   this.element4 = document.getElementById('rooms') as HTMLElement;
-  //   if (type == "1") {
-  //     this.numberOfRooms = '1';
-  //     this.element1.style.color = '#ffffff';
-  //     this.element1.style.backgroundColor = '#84ADAE';
-
-  //     this.element2.style.color = '#84ADAE';
-  //     this.element2.style.backgroundColor = '#ffffff';
-
-  //     this.element3.style.color = '#84ADAE';
-  //     this.element3.style.backgroundColor = '#ffffff';
-
-  //     this.element4.style.color = '#84ADAE';
-  //     this.element4.style.backgroundColor = '#ffffff';
-  //   } else  if (type == "2") {
-  //     this.numberOfRooms = '2';
-  //     this.element1.style.color = '#84ADAE';
-  //     this.element1.style.backgroundColor = '#ffffff';
-
-  //     this.element2.style.color = '#ffffff';
-  //     this.element2.style.backgroundColor = '#84ADAE';
-
-  //     this.element3.style.color = '#84ADAE';
-  //     this.element3.style.backgroundColor = '#ffffff';
-
-  //     this.element4.style.color = '#84ADAE';
-  //     this.element4.style.backgroundColor = '#ffffff';
-  //   } else  if (type == "3") {
-  //     this.numberOfRooms = '3';
-  //     this.element1.style.color = '#84ADAE';
-  //     this.element1.style.backgroundColor = '#ffffff';
-
-  //     this.element2.style.color = '#84ADAE';
-  //     this.element2.style.backgroundColor = '#ffffff';
-
-  //     this.element3.style.color = '#ffffff';
-  //     this.element3.style.backgroundColor = '#84ADAE';
-
-  //     this.element4.style.color = '#84ADAE';
-  //     this.element4.style.backgroundColor = '#ffffff';
-  //   } else  if (type == "more") {
-  //     this.numberOfRooms = 'more';
-  //     this.element1.style.color = '#84ADAE';
-  //     this.element1.style.backgroundColor = '#ffffff';
-
-  //     this.element2.style.color = '#84ADAE';
-  //     this.element2.style.backgroundColor = '#ffffff';
-
-  //     this.element3.style.color = '#84ADAE';
-  //     this.element3.style.backgroundColor = '#ffffff';
-
-  //     this.element4.style.color = '#ffffff';
-  //     this.element4.style.backgroundColor = '#84ADAE';
-  //   }
-  //   console.log(type);
-  // }
-
 }

@@ -29,15 +29,12 @@ export class PreQ7Component implements OnInit {
   }
 
   ngAfterViewInit() {
-   // this.signaturePad.set('minWidth', 1);
   }
 
   drawComplete() {
-  //  console.log(this.signaturePad.toDataURL());
   }
 
   drawStart() {
-    console.log('begin drawing');
   }
 
   clearSignature(){

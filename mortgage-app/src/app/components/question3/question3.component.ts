@@ -90,7 +90,6 @@ export class Question3Component implements OnInit {
       this.element4.style.color = '#ffffff';
       this.element4.style.backgroundColor = '#84ADAE';
     }
-    console.log(type);
   }
 
   public checkBox2(type: string) {
@@ -151,6 +150,5 @@ export class Question3Component implements OnInit {
       this.element8.style.color = '#ffffff';
       this.element8.style.backgroundColor = '#84ADAE';
     }
-    console.log(type);
   }
 }
