@@ -26,7 +26,6 @@ export class BrokerDescriptionComponent implements OnInit {
    
     this.selectedBroker= await this.readJson(id);
     this.currentRate=this.selectedBroker.description.rating;
-    console.log(this.selectedBroker)
   }
 
   async readJson(id:number){

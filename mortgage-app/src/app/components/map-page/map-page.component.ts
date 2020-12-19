@@ -55,7 +55,6 @@ export class MapPageComponent implements OnInit {
             
          });
          marker.addListener('click', () => {
-           console.log("PIRS")
           document.getElementById("popup").style.display = "flex";
           document.getElementById("map").style.opacity="0.3";
         });

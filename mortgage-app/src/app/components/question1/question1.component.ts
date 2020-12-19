@@ -50,10 +50,9 @@ export class Question1Component implements OnInit {
       this.element3.style.color = '#595959';
       this.element4.style.color = '#ffffff';
     }
-    console.log(type);
   }
 
-  getHouseImage() { console.log(this.houseImage); return this.houseImage; }
+  getHouseImage() { return this.houseImage; }
 
   getCondoImage() { return this.condoImage; }
 
