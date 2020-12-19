@@ -37,6 +37,7 @@ import { ContactBrokerComponent } from './components/contact-broker/contact-brok
 import { FindLawyersComponent } from './components/find-lawyers/find-lawyers.component';
 import { InfoPointComponent } from './components/info-point/info-point.component';
 import { NgImageSliderModule } from "ng-image-slider";
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +80,8 @@ import { NgImageSliderModule } from "ng-image-slider";
     HttpClientModule,
     NgbModule,
     SignaturePadModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    ChartsModule
   ],
   providers: [],
   exports: [AppRoutingModule,MatSliderModule],
