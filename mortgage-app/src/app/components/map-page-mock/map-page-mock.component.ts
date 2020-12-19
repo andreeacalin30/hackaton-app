@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Label } from 'ng2-charts';
 @Component({
@@ -8,7 +9,7 @@ import { Label } from 'ng2-charts';
 })
 export class MapPageMockComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -66,5 +67,9 @@ export class MapPageMockComponent implements OnInit {
       document.getElementById("menu").style.display = "block";
     else 
     document.getElementById("menu").style.display = "none";
+  }
+
+  goToRealter(){
+    this.route.navigate(['contact-broker']);
   }
 }
